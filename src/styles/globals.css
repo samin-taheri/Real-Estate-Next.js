@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.menu {
+    /* Your menu container styles */
+  }
+  
+  .menu-bar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-item {
+    color: #374151; /* Change the text color as needed */
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out; /* Add a transition for a hover effect */
+  
+    /* Additional styling as needed */
+  }
+  
+  .menu-item:hover {
+    color: #000; /* Change the hover background color as needed */
+  }
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .whatsapp-button a img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    border-radius: 50%; /* Makes it circular */
+    border: 1px solid #25d366; /* WhatsApp green color */
+    background-color: #25d366;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .whatsapp-button a img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+  }
