@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { appWithTranslation } from "next-i18next";
 
 import HeroSection from "@/components/hero-section";
 import Content from "@/components/content";

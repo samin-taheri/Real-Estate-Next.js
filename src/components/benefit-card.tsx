@@ -9,7 +9,7 @@ interface BenefitCardProps {
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-4 shadow-xl rounded-2xl">
+    <div className="bg-white p-4 hover:shadow-2xl shadow-xl rounded-2xl animate__animated animate__fadeInUp">
       <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4">
         {icon}
       </div>

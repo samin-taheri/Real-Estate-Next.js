@@ -1,5 +1,9 @@
 // components/RightMenu.tsx
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
+import { faListAlt } from '@fortawesome/free-regular-svg-icons';
+import { faMessage } from '@fortawesome/free-regular-svg-icons';
 
 interface RightMenuProps {
   isOpen: boolean;
@@ -22,14 +26,14 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, onClose, children }) => {
       <div className="w-64 p-4">
       {children}
       <ul className="menu-bar">
-        <li>
-          <button className="menu-item" onClick={() => handleItemClick('Item 1')}>Residential Property</button>
+        <li className="menu-item flex items-center">
+          <FontAwesomeIcon icon={faSquareCheck} className="menu-icon mr-2" onClick={() => handleItemClick('Item 1')}/>Residential Property
         </li>
-        <li>
-          <button className="menu-item" onClick={() => handleItemClick('Item 2')}>Blog</button>
+        <li className="menu-item flex items-center">
+          <FontAwesomeIcon icon={faListAlt} className="menu-icon mr-2" onClick={() => handleItemClick('Item 2')}/>Blog
         </li>
-        <li>
-          <button className="menu-item" onClick={() => handleItemClick('Item 3')}>Contact</button>
+        <li className="menu-item flex items-center">
+          <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>Contact
         </li>
       </ul>
       </div>

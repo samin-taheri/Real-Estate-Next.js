@@ -7,9 +7,11 @@ interface InfoSectionProps {
 
 const InfoSection: React.FC<InfoSectionProps> = ({ children }) => {
   return (
-    <InfoSection>
+    <div className="container px-5 py-24 mx-auto">
+      <div className="bg-white relative flex flex-wrap py-3 rounded-2xl shadow-xl mx-5">
         {children}
-      </InfoSection>
+      </div>
+    </div>
   );
 };
 

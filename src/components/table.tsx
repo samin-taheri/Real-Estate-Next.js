@@ -3,7 +3,7 @@ import InfoSection from './info-section';
 
 const Table = () => {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font" id="section4">
         <div className="text-center">
           <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700">
           Comparison of the advantages of obtaining 
