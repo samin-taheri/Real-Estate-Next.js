@@ -10,18 +10,10 @@ import ContactInfo from "./contact-info";
 
 const Header = () => {
   const { t } = useTranslation("common");
-  // {t("welcome")}
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentIcon, setCurrentIcon] = useState(faEllipsis);
   const scrollPosition = useScrollPosition();
   const menuRef = useRef<HTMLDivElement | null>(null);
-
-  const contentToCopy = (
-    <div className="mt-8">
-        <p className="ml-3 text-l text-gray-700 font-medium">+90 507 752 58 16</p>
-        <p className="ml-3 text-xs text-gray-500 font-medium">we are online</p>
-    </div>
-  );
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -59,14 +51,15 @@ const Header = () => {
       <Navigation/>
       <div>
       <div className="flex items-center mb-3 md:mb-0" ref={menuRef} tabIndex={-1}>
-      <Icon
+     
+          <Menu isOpen={isMenuOpen} onClose={closeMenu}>
+            
+            </Menu>
+            <Icon
             icon={currentIcon}
             onClick={isMenuOpen ? closeMenu : openMenu}
             isOpen={isMenuOpen}
           />
-          <Menu isOpen={isMenuOpen} onClose={closeMenu}>
-            {contentToCopy}
-            </Menu>
         <ContactInfo/>
         </div>
         </div>
