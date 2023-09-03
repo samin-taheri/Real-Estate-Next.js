@@ -12,6 +12,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    transition: width 0.3s ease-in-out;
   }
   
   .menu-item {
@@ -56,4 +57,12 @@
   
   .grid-item:hover {
     transform: scale(1.05); /* Scale up on hover */
+  }
+  /* styles.css or your Tailwind CSS file */
+  .blurred {
+    filter: blur(5px); /* Apply a blur effect to the main content */
+    transition: filter 0.3s ease-in-out;
+  }
+  .disable-scroll {
+    overflow: hidden;
   }

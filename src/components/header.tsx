@@ -37,6 +37,7 @@ const Header = () => {
   const openMenu = () => {
     setMenuOpen(true);
     setCurrentIcon(faXmark); 
+    document.body.classList.add('disable-scroll');
   };
 
   const closeMenu = () => {
@@ -46,14 +47,13 @@ const Header = () => {
 
   return (
     <header className="text-gray-600 body-font">
+        <div className={isMenuOpen ? 'disable-scroll' : ''}>
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <img className="w-30 h-30" alt="hero" src="https://jasminehomex.com/images/logo.gif"/>
       <Navigation/>
       <div>
       <div className="flex items-center mb-3 md:mb-0" ref={menuRef} tabIndex={-1}>
-     
           <Menu isOpen={isMenuOpen} onClose={closeMenu}>
-            
             </Menu>
             <Icon
             icon={currentIcon}
@@ -63,6 +63,7 @@ const Header = () => {
         <ContactInfo/>
         </div>
         </div>
+    </div>
     </div>
   </header>
   );
