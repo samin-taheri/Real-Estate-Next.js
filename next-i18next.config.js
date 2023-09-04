@@ -1,6 +1,6 @@
 // next-i18next.config.js
 
-const path = require("path");
+const path = require("./i18n");
 
 module.exports = {
   i18n: {

@@ -13,7 +13,7 @@ const TableSection: React.FC = () => {
           <br className="hidden lg:inline-block" />purchasing real estate
         </h1>
         <div className="flex mt-6 justify-center">
-          <div className="w-16 h-1 rounded-full bg-yellow-500 inline-flex"></div>
+          <div className="w-24 h-1 rounded-full bg-yellow-500 inline-flex"></div>
         </div>
       </div>
       <InfoSection>

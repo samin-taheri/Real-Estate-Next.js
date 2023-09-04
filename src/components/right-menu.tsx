@@ -36,6 +36,18 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
           <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>Contact
         </li>
       </ul>
+      <div className="pt-80 pl-5">
+        <li className='mb-3'>
+        <a className="text-gray-600 hover:text-gray-800 text-sm">Head Office: Oba District, 14.
+        <br className="lg:block hidden"/>Street Alanya, Antalya/Turkey</a>
+        </li>  
+        <li className='mb-3'>
+        <a className="text-gray-600 hover:text-gray-800 text-sm">+905077525816</a>
+        </li>
+        <li className='mb-3'>
+        <a className="text-gray-600 hover:text-gray-800 text-sm">info@jasminehomex.com</a>
+        </li>
+      </div>
       </div>
     </div>
   );

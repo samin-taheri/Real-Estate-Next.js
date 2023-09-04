@@ -4,9 +4,10 @@ import Menu from "./right-menu";
 import Icon from "./icon";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { faEllipsis, faXmark } from '@fortawesome/free-solid-svg-icons'; 
-import { useTranslation } from "next-i18next";
 import Navigation from "./navigation";
 import ContactInfo from "./contact-info";
+import { appWithTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 
 const Header = () => {
   const { t } = useTranslation("common");
@@ -43,6 +44,7 @@ const Header = () => {
   const closeMenu = () => {
     setMenuOpen(false);
     setCurrentIcon(faEllipsis); 
+    document.body.classList.remove('disable-scroll');
   };
 
   return (
