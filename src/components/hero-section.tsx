@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import MyModal from "./modal";
 
-const HeroSection = () => {
+const HeroSection= () => {
+
   return (
     <section className="text-gray-600 body-font" id="hero">
   <div className="container mx-auto flex px-20 py-16 md:flex-row flex-col items-center">
@@ -21,5 +23,4 @@ const HeroSection = () => {
 </section>
   );
 };
-// https://en.kestelgroup.com/wp-content/uploads/2023/05/bg52.webp
 export default HeroSection;

@@ -2,18 +2,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import Menu from "./right-menu";
 import Icon from "./icon";
-import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { faEllipsis, faXmark } from '@fortawesome/free-solid-svg-icons'; 
 import Navigation from "./navigation";
 import ContactInfo from "./contact-info";
-import { appWithTranslation } from "next-i18next";
-import { useTranslation } from "next-i18next";
 
 const Header = () => {
-  const { t } = useTranslation("common");
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentIcon, setCurrentIcon] = useState(faEllipsis);
-  const scrollPosition = useScrollPosition();
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

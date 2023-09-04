@@ -1,11 +1,9 @@
-import Image from "next/image";
-import { appWithTranslation } from "next-i18next";
-
 import HeroSection from "@/components/hero-section";
 import Content from "@/components/content";
 import Feature from "@/components/feature";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import TableSection from "@/components/table-section";
+import RealEstatePage from "@/components/real-estate";
 
 export default function Home() {
 
@@ -15,6 +13,7 @@ export default function Home() {
       <Content />
       <TableSection/>
       <Feature />
+      <RealEstatePage/>
     </main>
   );
 }
