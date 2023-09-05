@@ -9,7 +9,7 @@ interface ColoredCardsProps {
 const InfoCard: React.FC<ColoredCardsProps> = ({ title, icon }) => {
     
   return (
-    <div className="bg-white p-4 hover:shadow-2xl shadow-xl rounded-xl">
+    <div className="bg-white p-4 hover:shadow-xl shadow-md rounded-lg">
       <div className="w-10 h-10 flex justify-center items-center rounded-full bg-yellow-100 text-yellow-500 mb-4 ml-14">
         {icon}
       </div>

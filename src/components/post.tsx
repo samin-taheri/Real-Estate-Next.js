@@ -17,7 +17,7 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ post }) => {
   return (
-    <div className="relative mb-4 rounded-xl shadow-md hover:shadow-2xl overflow-hidden flex flex-col">
+    <div className="relative mb-4 rounded-xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col">
         <img
           src={post.image}
           alt={post.title}
@@ -43,7 +43,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
     <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
     <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
     <div className="flex justify-end p-7 mt-auto">
-      <button className="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg ">View More</button>
+      <button className="px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg ">View Details</button>
     </div>
     </div>
   );

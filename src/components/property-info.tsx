@@ -11,7 +11,7 @@ interface PropertyInfoProps {
 const PropertyInfo: React.FC<PropertyInfoProps> = ({ title, description, image, button }) => {
     
   return (
-    <div className="p-4 hover:shadow-2xl shadow-xl rounded-2xl">
+    <div className="p-4 hover:shadow-xl shadow-lg rounded-2xl">
          <img
           src={image}
           alt={title}

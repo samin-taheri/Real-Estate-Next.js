@@ -1,5 +1,7 @@
 import React from "react";
 import PostList from "../components/post-list";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const RealEstatePage: React.FC = () => {
   const posts = [
@@ -14,6 +16,12 @@ const RealEstatePage: React.FC = () => {
   return (
     <div>
       <PostList posts={posts} />
+      <div className="flex justify-center">
+      <button className="px-10 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg">
+      View More
+      <FontAwesomeIcon icon={faArrowRight} className="ml-2" /> 
+      </button>
+      </div>
     </div>
   );
 };

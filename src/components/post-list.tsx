@@ -18,7 +18,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
     <div className="px-10 py-10 mx-auto container p-10 flex-wrap">
        <div className="flex flex-wrap w-full mb-16 flex-col items-center text-center">
          <h1 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 animate__animated animate__fadeInLeft">
-         Choose from over 2000 options
+         Popular Property Deals
          </h1>
        </div>
     <div className="grid grid-cols-3 gap-5">
