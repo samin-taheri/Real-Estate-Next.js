@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
       <p className="mb-8 leading-relaxed">Answer 6 questions and get a catalog of Turkish property 
       <br className="hidden lg:inline-block"/>for residence permit or citizenship</p>
       <div className="flex justify-center">
-      <button className="px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">
+      <button className="px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">
         Get the Catalog
       </button>
       </div>

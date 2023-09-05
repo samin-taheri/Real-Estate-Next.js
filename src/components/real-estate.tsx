@@ -17,7 +17,7 @@ const RealEstatePage: React.FC = () => {
     <div>
       <PostList posts={posts} />
       <div className="flex justify-center">
-      <button className="px-10 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg">
+      <button className="px-10 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg">
       View More
       <FontAwesomeIcon icon={faArrowRight} className="ml-2" /> 
       </button>

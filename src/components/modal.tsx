@@ -106,7 +106,7 @@ const Modal: React.FC<ModalProps> = ({
             {renderContent()}
             <div>
             {step < 5 && (
-              <button className="px-10 py-2 mt-4 hover:yellow-500 hover:bg-yellow-500 bg-yellow-400 text-black rounded-lg" onClick={nextStep}>Next</button>
+              <button className="px-10 py-2 mt-4 hover:bg-yellow-600 bg-yellow-500 text-white rounded-lg" onClick={nextStep}>Next</button>
             )}
           </div>
           </div>

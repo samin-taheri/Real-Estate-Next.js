@@ -61,7 +61,7 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
       </ul>
       <div className="pt-64 pl-5">
       <div className="flex justify-center">
-      <button onClick={() => setIsOpen2(true)} className="mb-10 mr-4 px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Get Started</button>
+      <button onClick={() => setIsOpen2(true)} className="mb-10 mr-4 px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Get Started</button>
       {isOpen2 && (
               <Modal
                 closeModal={closeModal2}
