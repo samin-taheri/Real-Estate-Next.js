@@ -7,6 +7,7 @@ import RealEstatePage from "@/components/real-estate";
 import ColoredCardsList from "@/components/colored-cards-list";
 import InfoCardsList from "@/components/info-cards-list";
 import PropertyInfoList from "@/components/property-info-list";
+import Subscribe from "@/components/subscribe";
 
 export default function Home() {
 
@@ -19,6 +20,7 @@ export default function Home() {
       <ColoredCardsList/>
       <TableSection/>
       <RealEstatePage/>
+      <Subscribe/>
       <Feature />
     </main>
   );
