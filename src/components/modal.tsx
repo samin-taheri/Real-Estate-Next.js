@@ -28,8 +28,8 @@ const Modal: React.FC<ModalProps> = ({
         return (
           <div>
             <h1 className='text-xl font-semibold pt-5'>Real estate from developer from 35.000$</h1>
-            <p className="text-l font-medium pt-5">Projects on the Black Sea coast with yield up to 100% per year</p>
-            <p className="text-l font-medium  pt-2 pb-3">Answer questions and recieve a PDF presentation</p>
+            <p className="text-l font-medium pt-5">Projects on the Black Sea coast with yield up to 100% per year.</p>
+            <p className="text-l font-normal   pt-2 pb-3">Answer questions and recieve a PDF presentation.</p>
           </div>
         );
       case 2:
@@ -51,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({
       case 3:
         return (
           <div>
-            <h1 className='text-xl font-semibold pt-4'>How much are you counting on?</h1>
+            <h1 className='text-xl font-semibold pt-4 pb-7'>How much are you counting on?</h1>
             <select
               id="selectOption"
               name="selectOption"
@@ -76,7 +76,7 @@ const Modal: React.FC<ModalProps> = ({
               name="selectOption"
               value={selectedOptionForMoney}
               onChange={handleSelectChangeForMoney}
-              className="mt-7 mb-5 block w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-yellow-200 focus:outline-none"
+              className="mt-7 mb-2 block w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-yellow-200 focus:outline-none"
             >
               <option value="option1">WhatsApp</option>
               <option value="option2">Viber</option>
