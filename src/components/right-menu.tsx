@@ -1,9 +1,9 @@
-// components/RightMenu.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
+import MyModal from './modal';
 
 interface RightMenuProps {
   isOpen: boolean;
@@ -12,6 +12,16 @@ interface RightMenuProps {
 }
 
 const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const handleItemClick = (item: string) => {
     // Handle the click event for menu items here
     console.log(`Clicked on: ${item}`);
@@ -36,7 +46,16 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
           <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>Contact
         </li>
       </ul>
-      <div className="pt-80 pl-5">
+      <div className="pt-64 pl-5">
+      <div className="flex justify-center">
+      <button onClick={openModal} className="mb-10 mr-4 px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Get Started</button>
+      <MyModal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        <p>Real estate from developer in Batumi from 35.000$ </p>
+        <div className="flex justify-center">
+      <button className="mt-10 px-20 py-2 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Begin</button>
+      </div>
+      </MyModal>
+      </div>
         <li className='mb-3'>
         <a className="text-gray-600 hover:text-gray-800 text-sm">Head Office: Oba District, 14.
         <br className="lg:block hidden"/>Street Alanya, Antalya/Turkey</a>

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import MyModal from "./modal";
+import React from "react";
 
-const HeroSection= () => {
+const HeroSection: React.FC = () => {
 
   return (
     <section className="text-gray-600 body-font" id="hero">
@@ -13,7 +12,7 @@ const HeroSection= () => {
       <p className="mb-8 leading-relaxed animate__animated animate__fadeInUp">Answer 6 questions and get a catalog of Turkish property 
       <br className="hidden lg:inline-block animate__animated animate__fadeInUp"/>for residence permit or citizenship</p>
       <div className="flex justify-center">
-      <button className="animate__animated animate__fadeInUp px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Get the Catalog</button>
+      <button className="px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">Get the Catalog</button>
       </div>
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
