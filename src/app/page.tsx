@@ -8,12 +8,14 @@ import ColoredCardsList from "@/components/colored-cards-list";
 import InfoCardsList from "@/components/info-cards-list";
 import PropertyInfoList from "@/components/property-info-list";
 import Subscribe from "@/components/subscribe";
+import SearchOption from "@/components/search-option";
 
 export default function Home() {
 
   return (
     <main>
       <HeroSection />
+      {/* <SearchOption/> */}
       <Content />
       <InfoCardsList/>
       <PropertyInfoList/>

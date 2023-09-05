@@ -1,7 +1,7 @@
 import React from "react";
 import PostList from "../components/post-list";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const RealEstatePage: React.FC = () => {
   const posts = [
