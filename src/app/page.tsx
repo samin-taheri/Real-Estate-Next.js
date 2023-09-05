@@ -18,9 +18,9 @@ export default function Home() {
       <InfoCardsList/>
       <PropertyInfoList/>
       <ColoredCardsList/>
+      <Subscribe/>
       <TableSection/>
       <RealEstatePage/>
-      <Subscribe/>
       <Feature />
     </main>
   );

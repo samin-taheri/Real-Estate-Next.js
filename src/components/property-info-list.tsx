@@ -21,7 +21,7 @@ const PropertyInfoList: React.FC = () => {
               description="All the Lorem Ipsum generators on the Internet 
               tend to repeat predefined chunks as necessary, 
               making this the first true."
-              image= "/bg-15.jpg"
+              image= "/bg-23.jpg"
               button="Place an ad"
             />
             <PropertyInfo
@@ -29,7 +29,7 @@ const PropertyInfoList: React.FC = () => {
               description="All the Lorem Ipsum generators on the Internet 
               tend to repeat predefined chunks as necessary, 
               making this the first true."
-              image= "/bg-17.jpg"
+              image= "/bg-22.jpg"
               button='Find a rental'
             />
           </div>
