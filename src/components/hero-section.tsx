@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const HeroSection: React.FC = () => {
 
@@ -16,7 +14,6 @@ const HeroSection: React.FC = () => {
       <div className="flex justify-center">
       <button className="px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-black rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">
         Get the Catalog
-      <FontAwesomeIcon icon={faArrowRight} className="ml-3" /> 
       </button>
       </div>
     </div>
