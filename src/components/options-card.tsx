@@ -17,7 +17,7 @@ const OptionsCard: React.FC = () => {
         </div>
       </div>
       <InfoSection>
-        <div className="lg:w-5/6 w-full mx-auto overflow-auto p-10">
+        <div className="lg:w-6/7 w-full mx-auto overflow-auto p-10">
       <MultiSelection />    
         </div>
       </InfoSection>
