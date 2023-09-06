@@ -5,14 +5,14 @@ import ResidenceInfo from './residence-info';
 const Content: React.FC = () => {
   return (
     <section className="text-gray-600 body-font" id="section2">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-8 mx-auto">
       <div className="flex flex-wrap w-full mb-10 flex-col items-center text-center">
          <h1 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 animate__animated animate__fadeInLeft">
           Benefits of living in Turkey
          </h1>
        </div>
         <div className="container p-6 flex-wrap">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-4 pb-5">
             <BenefitCard
               icon={
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

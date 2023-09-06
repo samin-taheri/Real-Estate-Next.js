@@ -99,4 +99,39 @@
     cursor: pointer;
     right: auto
   }
+  .question-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 12px;
+  }
   
+  .question-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .answers-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .answer-item {
+    cursor: pointer;
+    padding: 8px;
+    margin: 4px;
+    border: 0.5px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .answer-item:hover {
+    background-color: #c0bebe;
+  }
+  
+  .selected-answer {
+    background-color: #ebb305;
+    color: white;
+    font-weight: bold;
+  }
+
+
