@@ -1,0 +1,84 @@
+import React from 'react';
+import QuizQuestion from './quiz-questions'; 
+import QuizProgressBar from './quiz-progress-bar';
+
+interface QuizFormProps {
+  currentQuestionIndex: number;
+  progress: number;
+  quizCompleted: boolean;
+  selectedAnswer: number | null;
+  onNextClick: () => void;
+  onPreviousClick: () => void;
+  onAnswerClick: (answerIndex: number) => void; 
+  quizQuestions: {
+    question: string;
+    answers: string[];
+  }[];
+}
+
+const QuizForm: React.FC<QuizFormProps> = ({
+  currentQuestionIndex,
+  progress,
+  quizCompleted,
+  selectedAnswer,
+  onNextClick,
+  onPreviousClick,
+  onAnswerClick, 
+  quizQuestions,
+}) => (
+  <div>
+    <QuizProgressBar progress={progress} />
+    {quizCompleted ? (
+      <div>
+        <h2 className="question-text pt-4">The collection is almost ready. You will receive it in a couple of minutes. 🤩</h2>
+        <div className="mt-10 mb-10 flex w-full md:justify-start justify-center items-end">
+          <div className="relative ml-5 lg:w-full xl:w-1/2 w-2/4">
+            <input
+              placeholder="Your Phone"
+              type="text"
+              id="hero-field"
+              name="hero-field"
+              className="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-200 focus:bg-transparent focus:border-yellow-500 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <button className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">
+            Get an answer
+          </button>
+        </div>
+      </div>
+    ) : (
+      <>
+        <QuizQuestion
+            question={quizQuestions[currentQuestionIndex].question}
+            answers={quizQuestions[currentQuestionIndex].answers}
+            selectedAnswer={selectedAnswer}
+            onAnswerClick={onAnswerClick}
+  />
+      </>
+    )}
+    {!quizCompleted && (
+      <button
+        onClick={onPreviousClick}
+        className={`px-10 py-2 ml-6 rounded-lg mt-7 ${
+          currentQuestionIndex === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'hover:bg-yellow-500 bg-yellow-400 text-white'
+        }`}
+        disabled={currentQuestionIndex === 0}
+      >
+        Previous
+      </button>
+    )}
+    {!quizCompleted && (
+      <button
+        onClick={onNextClick}
+        className={`px-10 py-2 ml-6 rounded-lg mt-7 ${
+          currentQuestionIndex === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'hover:bg-yellow-500 bg-yellow-400 text-white'
+        }`}
+        disabled={selectedAnswer === null && !quizCompleted}
+      >
+        Next
+      </button>
+    )}
+  </div>
+);
+
+export default QuizForm;
