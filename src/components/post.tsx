@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faFireAlt } from "@fortawesome/free-solid-svg-icons";
@@ -17,8 +18,17 @@ interface PostProps {
 }
 
 const Post: React.FC<PostProps> = ({ post }) => {
+  const [showButton, setShowButton] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowButton(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowButton(false);
+  };
   return (
-    <div className="relative mb-4 rounded-xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col">
+    <div className="relative mb-4 rounded-xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col transition-opacity" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <img
           src={post.image}
           alt={post.title}
@@ -43,8 +53,8 @@ const Post: React.FC<PostProps> = ({ post }) => {
         </div>
     <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
     <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
-    <div className="flex justify-end p-7 mt-auto">
-    <Button className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg">View Details</Button>
+    <div className="flex justify-end p-10 mt-auto">
+    <Button className={`hidden-button ${showButton ? "visible" : ""}`}>View Details</Button>
     </div>
     </div>
   );

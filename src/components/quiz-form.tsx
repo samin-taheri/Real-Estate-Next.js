@@ -67,7 +67,7 @@ const QuizForm: React.FC<QuizFormProps> = ({
       <Button
       onClick={onPreviousClick}
       disabled={currentQuestionIndex === 0}
-      iconLeft={<FontAwesomeIcon icon={faAnglesLeft} className="ml-3" /> }
+      iconLeft={<FontAwesomeIcon icon={faAnglesLeft} className="mr-3" /> }
     >
       Previous
     </Button>

@@ -10,7 +10,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
       <div className="flex mb-2 items-center justify-between">
         <div>
           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-200 mb-3">
-          Survey passed on
+          Survey passed on:
           </span>
         </div>
       </div>
