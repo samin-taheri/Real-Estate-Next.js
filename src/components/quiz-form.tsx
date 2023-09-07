@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import Button from './button';
+import CompletedQuiz from './completed-quiz';
 
 interface QuizFormProps {
   currentQuestionIndex: number;
@@ -18,7 +19,17 @@ interface QuizFormProps {
     question: string;
     answers: string[];
   }[];
+  currentImageIndex: number;
 }
+
+const imageUrls = [
+  'bg-24.jpg',
+  'bg-21.jpg',
+  'bg-28.jpg',
+  'bg-25.jpg',
+  'bg-26.jpg',
+  'bg-27.jpg',
+];
 
 const QuizForm: React.FC<QuizFormProps> = ({
   currentQuestionIndex,
@@ -29,36 +40,26 @@ const QuizForm: React.FC<QuizFormProps> = ({
   onPreviousClick,
   onAnswerClick, 
   quizQuestions,
+  currentImageIndex,
 }) => (
   <div>
     <QuizProgressBar progress={progress} />
     {quizCompleted ? (
-      <div>
-        <h2 className="question-text pt-4">The collection is almost ready. You will receive it in a couple of minutes. 🤩</h2>
-        <div className="mt-10 mb-10 flex w-full md:justify-start justify-center items-end">
-          <div className="relative ml-5 lg:w-full xl:w-1/2 w-2/4">
-            <input
-              placeholder="Your Phone"
-              type="text"
-              id="hero-field"
-              name="hero-field"
-              className="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-200 focus:bg-transparent focus:border-yellow-500 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <button className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">
-            Get an answer
-          </button>
-        </div>
-      </div>
+      <CompletedQuiz/>
     ) : (
-      <>
+      <div className="flex">
         <QuizQuestion
             question={quizQuestions[currentQuestionIndex].question}
             answers={quizQuestions[currentQuestionIndex].answers}
             selectedAnswer={selectedAnswer}
             onAnswerClick={onAnswerClick}
         />
-      </>
+        <div className="w-1/2 ml-10">
+        <div className="question-container w-1/2" style={{width: '450px'}}>
+        <img src={imageUrls[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} className="w-45 h-45" />
+        </div>
+      </div>
+    </div>
     )}
     <div className="flex justify-between">
     {!quizCompleted && (

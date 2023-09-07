@@ -160,3 +160,50 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* You can adjust the scale factor as needed */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s infinite; /* Adjust the duration as needed */
+}
+  .whatsapp-button-2,
+  .viber-button,
+  .telegram-button {
+    padding: 10px 20px;
+    background-color: #25d366; /* WhatsApp green color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .whatsapp-button-2:hover {
+    background-color: #128c7e; /* Darker green color on hover */
+  }
+
+  .viber-button {
+    background-color: #665cac; /* Viber purple color */
+  }
+
+  .viber-button:hover {
+    background-color: #4a438d; /* Darker purple color on hover */
+  }
+
+  .telegram-button {
+    background-color: #0088cc; /* Telegram blue color */
+  }
+
+  .telegram-button:hover {
+    background-color: #0077b5; /* Darker blue color on hover */
+  }

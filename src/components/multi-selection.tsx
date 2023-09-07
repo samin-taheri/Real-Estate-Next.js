@@ -5,13 +5,14 @@ interface QuizQuestion {
     question: string;
     answers: string[];
   }
-  
+
 const MultipleChoiceQuestion: React.FC = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [progress, setProgress] = useState<number>(0);
     const [quizCompleted, setQuizCompleted] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-
+    const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+    
     const [quizQuestions] = useState<QuizQuestion[]>([
       {
         question: 'What is the purpose of buying real estate?',
@@ -44,6 +45,9 @@ const MultipleChoiceQuestion: React.FC = () => {
       };
 
     const handleNextClick = () => {
+      if (currentImageIndex < 5) {
+        setCurrentImageIndex(currentImageIndex + 1);
+      }
         if (currentQuestionIndex < quizQuestions.length - 1) {
           setCurrentQuestionIndex(currentQuestionIndex + 1);
           setSelectedAnswer(null); // Reset selected answer
@@ -60,6 +64,9 @@ const MultipleChoiceQuestion: React.FC = () => {
       };
       
       const handlePreviousClick = () => {
+        if (currentImageIndex < 5) {
+          setCurrentImageIndex(currentImageIndex - 1);
+        }
         if (currentQuestionIndex > 0) {
           setCurrentQuestionIndex(currentQuestionIndex - 1);
           setSelectedAnswer(null); // Reset selected answer
@@ -81,6 +88,7 @@ const MultipleChoiceQuestion: React.FC = () => {
         onPreviousClick={handlePreviousClick}
         onAnswerClick={handleAnswerClick}
         quizQuestions={quizQuestions} 
+        currentImageIndex={currentImageIndex}
       />
   </div>
   );

@@ -28,12 +28,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
           </li>
         ))}
       </ul>
-    </div>
-    <div className="w-1/2 ml-10">
-    <div className="question-container w-1/2" style={{width: '500px'}}>
-        <img src="/bg-24.jpg" alt="Quiz Image" className="w-45 h-45"/>
-        </div>
-      </div>
+    </div>    
     </div>
   );
 };
