@@ -5,7 +5,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import TableSection from "@/components/table-section";
 import RealEstatePage from "@/components/real-estate";
 import ColoredCardsList from "@/components/colored-cards-list";
-import InfoCardsList from "@/components/info-cards-list";
 import PropertyInfoList from "@/components/property-info-list";
 import Subscribe from "@/components/subscribe";
 import BenefitsOfWorking from "@/components/benefits-of-working";
@@ -19,7 +18,6 @@ export default function Home() {
       <Content />
       <ResidenceInfo />
       <BenefitsOfWorking/>
-      {/* <InfoCardsList/> */}
       <PropertyInfoList/>
       <ColoredCardsList/>
       <Subscribe/>
