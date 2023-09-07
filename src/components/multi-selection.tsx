@@ -45,10 +45,8 @@ const MultipleChoiceQuestion: React.FC = () => {
       };
 
     const handleNextClick = () => {
-      if (currentImageIndex < 5) {
-        setCurrentImageIndex(currentImageIndex + 1);
-      }
-        if (currentQuestionIndex < quizQuestions.length - 1) {
+        if (currentQuestionIndex < quizQuestions.length - 1 && currentImageIndex < 5) {
+          setCurrentImageIndex(currentImageIndex + 1);
           setCurrentQuestionIndex(currentQuestionIndex + 1);
           setSelectedAnswer(null); // Reset selected answer
             setProgress((currentProgress) =>
@@ -64,11 +62,9 @@ const MultipleChoiceQuestion: React.FC = () => {
       };
       
       const handlePreviousClick = () => {
-        if (currentImageIndex < 5) {
-          setCurrentImageIndex(currentImageIndex - 1);
-        }
-        if (currentQuestionIndex > 0) {
+        if (currentQuestionIndex > 0 && currentImageIndex < 5) {
           setCurrentQuestionIndex(currentQuestionIndex - 1);
+          setCurrentImageIndex(currentImageIndex - 1);
           setSelectedAnswer(null); // Reset selected answer
       
           // Calculate the progress percentage for the previous question

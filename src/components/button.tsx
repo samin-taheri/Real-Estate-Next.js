@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
           : 'hover:bg-yellow-500 bg-yellow-400 text-white'
       } ${className}`}
     >
-      {iconLeft && <span className="mr-3">{iconLeft}</span>}
+      {iconLeft && <span className="mr-2">{iconLeft}</span>}
       {children}
       {iconRight && <span className="ml-2">{iconRight}</span>}
     </button>
