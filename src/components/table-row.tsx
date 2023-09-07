@@ -11,11 +11,11 @@ interface TableRowProps {
 const TableRow: React.FC<TableRowProps> = ({ title, permitValue, citizenshipValue, icon }) => {
   return (
     <tr>
-      <td className="px-4 py-3">{icon}</td>
-      <td className="px-4 py-3">{title}</td>
-      <td className="px-4 py-3">{permitValue}</td>
-      <td className="px-4 py-3">{citizenshipValue}</td>
-      <td className="w-10 text-center"></td>
+      <td className="px-4 py-3 border-b">{icon}</td>
+      <td className="px-4 py-3 border-b">{title}</td>
+      <td className="px-4 py-3 border-b">{permitValue}</td>
+      <td className="px-4 py-3 border-b">{citizenshipValue}</td>
+      <td className="w-10 text-center border-b"></td>
     </tr>
   );
 };

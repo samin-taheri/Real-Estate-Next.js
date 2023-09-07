@@ -7,7 +7,7 @@ const PropertyInfoList: React.FC = () => {
       <div className="container px-5 py-8 mx-auto">
       
         <div className="container p-6 flex-wrap">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-6">
             <PropertyInfo
               title="Buy a property"
               description="All the Lorem Ipsum generators on the Internet 
