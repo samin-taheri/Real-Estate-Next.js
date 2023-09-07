@@ -1,33 +1,9 @@
 'use client';
 import React, { useState } from "react";
-import Modal from "./modal";
 import CatalogPopup from "./catalog-popup";
+import Button from "./button";
 
 const HeroSection: React.FC = () => {
-  const [isOpen2, setIsOpen2] = useState(false);
-  const [step, setStep] = useState<number>(1);
-  const [selectedOption, setSelectedOption] = useState<string>('option1');
-  const [selectedOptionForMoney, setSelectedOptionForMoney] = useState<string>('option1');
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(event.target.value);
-  };
-
-  const handleSelectChangeForMoney = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOptionForMoney(event.target.value);
-  };
-
-  const closeModal2 = () => {
-    setIsOpen2(false);
-    setStep(1);
-  };
-
-  const nextStep = () => {
-    if (step < 5) {
-      setStep(step + 1);
-    }
-  };
-
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -48,9 +24,12 @@ const HeroSection: React.FC = () => {
       <p className="mb-8 leading-relaxed animate__animated animate__fadeInLeft">Answer 6 questions and get a catalog of Turkish property 
       <br className="hidden lg:inline-block animate__animated animate__fadeInLeft"/>for residence permit or citizenship</p>
       <div className="flex justify-center">
-      <button onClick={openPopup} className="px-20 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400 animate__animated animate__fadeInLeft">
+      <Button
+        onClick={openPopup}
+        className="px-24 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400 animate__animated animate__fadeInLeft"
+      >
         Get Started
-      </button>
+      </Button>
       {isPopupOpen && <CatalogPopup onClose={closePopup} />}
       </div>
     </div>

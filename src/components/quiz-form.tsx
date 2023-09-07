@@ -1,6 +1,10 @@
 import React from 'react';
 import QuizQuestion from './quiz-questions'; 
 import QuizProgressBar from './quiz-progress-bar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import Button from './button';
 
 interface QuizFormProps {
   currentQuestionIndex: number;
@@ -53,33 +57,30 @@ const QuizForm: React.FC<QuizFormProps> = ({
             answers={quizQuestions[currentQuestionIndex].answers}
             selectedAnswer={selectedAnswer}
             onAnswerClick={onAnswerClick}
-  />
+        />
       </>
     )}
+    <div className="flex justify-between">
     {!quizCompleted && (
-      <button
-        onClick={onPreviousClick}
-        className={`px-10 py-2 rounded-lg mt-7 ${
-          currentQuestionIndex === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'hover:bg-yellow-500 bg-yellow-400 text-white'
-        }`}
-        disabled={currentQuestionIndex === 0}
-      >
-        Previous
-      </button>
+     
+      <Button
+      onClick={onPreviousClick}
+      disabled={currentQuestionIndex === 0}
+      iconLeft={<FontAwesomeIcon icon={faAnglesLeft} className="ml-3" /> }
+    >
+      Previous
+    </Button>
     )}
     {!quizCompleted && (
-      <button
-        onClick={onNextClick}
-        className={`px-10 py-2 ml-6 rounded-lg mt-7 ${
-          selectedAnswer !== null
-            ? 'hover:bg-yellow-500 bg-yellow-400 text-white'
-            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-        }`}
-        disabled={selectedAnswer === null && !quizCompleted}
-      >
-        Next
-      </button>
+      <Button
+      onClick={onNextClick}
+      disabled={selectedAnswer === null && !quizCompleted}
+      iconRight={<FontAwesomeIcon icon={faAnglesRight} className="ml-3" /> }
+    >
+      Next
+    </Button>
     )}
+    </div>
   </div>
 );
 

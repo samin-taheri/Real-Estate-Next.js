@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './button';
 
 const Footer = () => {
   return (
@@ -57,7 +58,10 @@ const Footer = () => {
         <div className="relative sm:w-64 w-40 sm:mr-4 mr-2">
           <input placeholder='Your Email' type="text" id="footer-field" name="footer-field" className="ml-10 w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
         </div>
-        <button className="ml-10 inline-flex text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg">Send</button>
+        <Button
+          className="ml-10 inline-flex text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg">
+          Send
+        </Button>
         <p className="ml-10 text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">Subscribe for
           <br className="lg:block hidden"/>our newsletter
         </p>

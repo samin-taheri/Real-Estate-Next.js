@@ -1,5 +1,6 @@
 // components/PropertyInfo.tsx
 import React from 'react';
+import Button from './button';
 
 interface PropertyInfoProps {
   title: string;
@@ -20,7 +21,10 @@ const PropertyInfo: React.FC<PropertyInfoProps> = ({ title, description, image, 
       <h2 className="text-lg text-gray-700 font-medium title-font mb-2 mt-3 text-center">{title}</h2>
       <p className="leading-relaxed text-base text-center">{description}</p>
       <div className="flex justify-center p-6">
-      <button className="px-14 py-2 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">{button}</button>
+      <Button
+        className="px-14 py-2 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400">
+        {button}
+      </Button>
       </div>
     </div>
   );

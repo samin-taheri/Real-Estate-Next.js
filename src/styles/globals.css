@@ -97,11 +97,17 @@
     background: none;
     border: none;
     cursor: pointer;
-    right: auto
+    right: auto;
+    transition: background-color 0.2s ease-in-out;
   }
+
+  .modal-close-button:hover {
+    background-color: #4a90e2; /* Background color on hover */
+  }
+
   .question-container {
-    background-color: #f0f0f0;
-    padding: 30px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 12px;
   }
   
@@ -112,7 +118,7 @@
   
   .answers-list {
     list-style: none;
-    padding: 0;
+    padding-top: 10px;
   }
   
   .answer-item {
@@ -125,7 +131,7 @@
   }
   
   .answer-item:hover {
-    background-color: #c0bebe;
+    background-color: #e2e2e2;
   }
   
   .selected-answer {
@@ -154,5 +160,3 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
-
-

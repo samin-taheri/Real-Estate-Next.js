@@ -1,6 +1,7 @@
 import React from "react";
 import WhatsAppButton from "./whatsapp-button";
 import InfoSection from "./info-section";
+import Button from "./button";
 
 const Subscribe = () => {
   return(
@@ -16,7 +17,9 @@ const Subscribe = () => {
       <div className="relative ml-5 lg:w-full xl:w-1/2 w-2/4">
         <input placeholder='Your Email' type="text" id="hero-field" name="hero-field" className="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-200 focus:bg-transparent focus:border-yellow-500 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
       </div>
-      <button className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">Subscribe</button>
+      <Button
+        className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">Subscribe
+      </Button>
     </div>
       </div>
       </InfoSection>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Button from './button';
 
 interface ModalProps {
   closeModal: () => void;
@@ -106,7 +107,8 @@ const Modal: React.FC<ModalProps> = ({
             {renderContent()}
             <div>
             {step < 5 && (
-              <button className="px-10 py-2 mt-4 hover:bg-yellow-600 bg-yellow-500 text-white rounded-lg" onClick={nextStep}>Next</button>
+              <Button className="px-10 py-2 mt-4 hover:bg-yellow-600 bg-yellow-500 text-white rounded-lg" onClick={nextStep}>Next
+            </Button>
             )}
           </div>
           </div>

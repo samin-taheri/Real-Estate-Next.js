@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faFireAlt } from "@fortawesome/free-solid-svg-icons";
+import Button from "./button";
 
 interface PostProps {
   post: {
@@ -43,7 +44,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
     <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
     <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
     <div className="flex justify-end p-7 mt-auto">
-      <button className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg ">View Details</button>
+    <Button className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg">View Details</Button>
     </div>
     </div>
   );
