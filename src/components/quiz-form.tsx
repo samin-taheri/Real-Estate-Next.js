@@ -59,7 +59,7 @@ const QuizForm: React.FC<QuizFormProps> = ({
     {!quizCompleted && (
       <button
         onClick={onPreviousClick}
-        className={`px-10 py-2 ml-6 rounded-lg mt-7 ${
+        className={`px-10 py-2 rounded-lg mt-7 ${
           currentQuestionIndex === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'hover:bg-yellow-500 bg-yellow-400 text-white'
         }`}
         disabled={currentQuestionIndex === 0}
@@ -71,7 +71,9 @@ const QuizForm: React.FC<QuizFormProps> = ({
       <button
         onClick={onNextClick}
         className={`px-10 py-2 ml-6 rounded-lg mt-7 ${
-          currentQuestionIndex === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'hover:bg-yellow-500 bg-yellow-400 text-white'
+          selectedAnswer !== null
+            ? 'hover:bg-yellow-500 bg-yellow-400 text-white'
+            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
         }`}
         disabled={selectedAnswer === null && !quizCompleted}
       >

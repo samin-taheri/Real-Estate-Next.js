@@ -14,7 +14,7 @@ const MultipleChoiceQuestion: React.FC = () => {
 
     const [quizQuestions] = useState<QuizQuestion[]>([
       {
-        question: 'What is your purpose of buying real estate?',
+        question: 'What is the purpose of buying real estate?',
         answers: ['For investment', 'For life', 'For temporary stay and recreation', 'For child/student'],
       },
       {
