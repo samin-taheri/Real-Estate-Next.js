@@ -7,7 +7,7 @@ const Footer = () => {
   <div className="container px-5 py-10 mx-auto">
     <div className="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
    
-      <div className="lg:w-1/3 md:w-1/2 px-10">
+      <div className="lg:w-1/3 md:w-1/2 w-full px-4">
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About Us</h2>
         <nav className="list-none mb-10">
           <li>

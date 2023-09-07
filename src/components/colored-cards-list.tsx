@@ -7,7 +7,7 @@ const ColoredCardsList: React.FC = () => {
       <div className="container px-5 py-16 mx-auto">
       
         <div className="container p-6 flex-wrap">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid lg:grid-cols-3 md:grid-col-1 gap-6">
             <ColoredCards
               backgroundColor='rgba(199, 229, 225530, 0.5)'
               title="Calculate the cost of your property"

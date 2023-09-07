@@ -12,7 +12,7 @@ const Content: React.FC = () => {
          </h1>
        </div>
         <div className="container p-6 flex-wrap">
-          <div className="grid grid-cols-4 gap-4 pb-5">
+          <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4 pb-5">
             <BenefitCard
               icon={
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

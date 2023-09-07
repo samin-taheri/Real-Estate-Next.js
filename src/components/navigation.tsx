@@ -3,7 +3,7 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+    <nav className="flex flex-wrap items-center text-base justify-center">
       <Link
         activeClass="active"
         href='/section2'
@@ -14,7 +14,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        Residence Permit and Citizenship
+        Citizenship
       </Link>
       <Link
         activeClass="active"

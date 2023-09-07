@@ -12,7 +12,7 @@ const BenefitsOfWorking: React.FC = () => {
          </h1>
        </div>
         <div className="container p-6 flex-wrap">
-          <div className="grid grid-cols-2 gap-6 pb-5">
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-6 pb-5">
           <BenefitsOfWorkingCard
             color='rgba(255, 228, 249, 0.8)'
               icon={

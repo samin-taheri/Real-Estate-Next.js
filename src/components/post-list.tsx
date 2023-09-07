@@ -21,7 +21,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
          Popular Property Deals
          </h1>
        </div>
-    <div className="grid grid-cols-3 gap-5">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}

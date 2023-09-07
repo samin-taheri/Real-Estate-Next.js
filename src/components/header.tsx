@@ -43,13 +43,13 @@ const Header = () => {
   };
 
   return (
-    <header className="text-gray-600 body-font">
+    <header className="text-gray-600 body-font justify-between">
         <div className={isMenuOpen ? 'disable-scroll' : ''}>
-    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <img className="w-30 h-30" alt="hero" src="https://jasminehomex.com/images/logo.gif"/>
+    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center md:justify-around sm:justify-around ">
+      <img className="w-30 h-30 sm:pb-4 pb-4" alt="hero" src="https://jasminehomex.com/images/logo.gif"/>
       <Navigation/>
       <div>
-      <div className="flex items-center mb-3 md:mb-0" ref={menuRef} tabIndex={-1}>
+      <div className="flex items-center mb-3 sm:justify-center md:justify-center sm:pt-4 md:pt-4 pt-4" ref={menuRef} tabIndex={-1}>
           <Menu isOpen={isMenuOpen} onClose={closeMenu}>
             </Menu>
             <Icon

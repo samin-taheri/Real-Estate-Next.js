@@ -7,7 +7,7 @@ const InfoCardsList: React.FC = () => {
       <div className="container px-5 py-16 mx-auto">
       
         <div className="container p-6 flex-wrap items-center">
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-6 gap-6">
             <InfoCard
               title="Houses"
               icon={

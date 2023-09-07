@@ -15,7 +15,7 @@ const Feature = () => {
         </div>
         <Button
           className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">
-          Get an answer
+          Submit
         </Button>
       </div>
         </div>

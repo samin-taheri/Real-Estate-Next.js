@@ -19,7 +19,7 @@ export default function Home() {
       <Content />
       <ResidenceInfo />
       <BenefitsOfWorking/>
-      <InfoCardsList/>
+      {/* <InfoCardsList/> */}
       <PropertyInfoList/>
       <ColoredCardsList/>
       <Subscribe/>

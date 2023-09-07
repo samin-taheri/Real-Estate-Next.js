@@ -46,7 +46,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
           <p className="leading-relaxed">{post.permit}</p>
         </div>
         </div>
-        <div className="absolute top-52 left-4 z-10 flex flex-col">
+        <div className="absolute top-24 left-4 z-10 flex flex-col">
         <div className="bg-white bg-opacity-80 text-gray-900 py-1 px-2 rounded-2xl text-xs mb-2 flex items-center">
           <p className="leading-relaxed">{post.priceRange}</p>
         </div>
