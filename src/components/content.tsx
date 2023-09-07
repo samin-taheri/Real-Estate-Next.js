@@ -87,7 +87,6 @@ const Content: React.FC = () => {
             />
           </div>
         </div>
-        <ResidenceInfo />
       </div>
     </section>
   );

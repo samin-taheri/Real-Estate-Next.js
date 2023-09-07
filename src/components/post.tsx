@@ -28,7 +28,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
     setShowButton(false);
   };
   return (
-    <div className="relative mb-4 rounded-xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col transition-opacity" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="relative mb-4 rounded-xl shadow-lg-2 hover:shadow-xl overflow-hidden flex flex-col transition-opacity" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <img
           src={post.image}
           alt={post.title}
@@ -51,11 +51,11 @@ const Post: React.FC<PostProps> = ({ post }) => {
           <p className="leading-relaxed">{post.priceRange}</p>
         </div>
         </div>
-    <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
-    <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
-    <div className="flex justify-end p-10 mt-auto">
-    <Button className={`hidden-button ${showButton ? "visible" : ""}`}>View Details</Button>
-    </div>
+        <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
+        <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
+        <div className="flex justify-end p-10 mt-auto">
+        <Button className={`hidden-button ${showButton ? "visible" : ""}`}>View Details</Button>
+        </div>
     </div>
   );
 };
