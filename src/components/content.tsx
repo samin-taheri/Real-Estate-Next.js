@@ -1,6 +1,5 @@
 import React from 'react';
 import BenefitCard from './benefit-card';
-import ResidenceInfo from './residence-info';
 
 const Content: React.FC = () => {
   return (

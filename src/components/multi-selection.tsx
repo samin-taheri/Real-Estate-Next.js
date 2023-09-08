@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import QuizForm from './quiz-form';
-
-interface QuizQuestion {
-    question: string;
-    answers: string[];
-  }
+import {QuizQuestion} from './interfaces';
 
 const MultipleChoiceQuestion: React.FC = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);

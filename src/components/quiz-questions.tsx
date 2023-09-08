@@ -1,4 +1,5 @@
 import React from 'react';
+import {QuizQuestionProps} from './interfaces';
 
 const imageUrls = [
   'bg-24.jpg',
@@ -8,14 +9,6 @@ const imageUrls = [
   'bg-26.jpg',
   'bg-27.jpg',
 ];
-
-interface QuizQuestionProps {
-  question: string;
-  answers: string[];
-  selectedAnswer: number | null;
-  onAnswerClick: (answerIndex: number) => void;
-  currentImageIndex: number;
-}
 
 const QuizQuestion: React.FC<QuizQuestionProps> = ({
   question,

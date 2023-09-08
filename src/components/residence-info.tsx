@@ -1,4 +1,3 @@
-// components/ResidenceInfo.tsx
 import React from 'react';
 import InfoSection from './info-section';
 

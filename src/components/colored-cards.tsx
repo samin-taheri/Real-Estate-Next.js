@@ -1,13 +1,5 @@
-// components/ColoredCards.tsx
 import React from 'react';
-
-interface ColoredCardsProps {
-  title: string;
-  description: string;
-  backgroundColor?: string;
-  link: string;
-  linkColor: string;
-}
+import {ColoredCardsProps} from './interfaces'
 
 const ColoredCards: React.FC<ColoredCardsProps> = ({ title, description, backgroundColor, link, linkColor }) => {
     const CardStyle = {

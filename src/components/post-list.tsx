@@ -1,17 +1,6 @@
 import React from "react";
 import Post from "./post";
-
-interface PostListProps {
-  posts: {
-    id: number;
-    title: string;
-    description: string;
-    location: string;
-    image: string;
-    permit: string;
-    priceRange: string;
-  }[];
-}
+import {PostListProps} from './interfaces';
 
 const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (

@@ -6,21 +6,7 @@ import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import Button from './button';
 import CompletedQuiz from './completed-quiz';
-
-interface QuizFormProps {
-  currentQuestionIndex: number;
-  progress: number;
-  quizCompleted: boolean;
-  selectedAnswer: number | null;
-  onNextClick: () => void;
-  onPreviousClick: () => void;
-  onAnswerClick: (answerIndex: number) => void; 
-  quizQuestions: {
-    question: string;
-    answers: string[];
-  }[];
-  currentImageIndex: number;
-}
+import {QuizFormProps} from './interfaces';
 
 const QuizForm: React.FC<QuizFormProps> = ({
   currentQuestionIndex,

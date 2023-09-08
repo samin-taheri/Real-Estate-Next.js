@@ -1,12 +1,5 @@
-// components/BenefitsOfWorkingCard.tsx
 import React from 'react';
-
-interface BenefitsOfWorkingCardProps {
-  icon?: React.ReactNode;
-  title: string;
-  description: string;
-  color: string; 
-}
+import {BenefitsOfWorkingCardProps} from './interfaces';
 
 const BenefitsOfWorkingCard: React.FC<BenefitsOfWorkingCardProps> = ({ icon, title, description, color }) => {
     const CardStyle = {

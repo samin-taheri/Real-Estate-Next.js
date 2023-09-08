@@ -1,12 +1,5 @@
-// TableRow.tsx
 import React from 'react';
-
-interface TableRowProps {
-  title: string;
-  permitValue: string;
-  citizenshipValue: string;
-  icon?: React.ReactNode;
-}
+import {TableRowProps} from './interfaces';
 
 const TableRow: React.FC<TableRowProps> = ({ title, permitValue, citizenshipValue, icon }) => {
   return (

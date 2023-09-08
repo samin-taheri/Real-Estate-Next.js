@@ -1,11 +1,5 @@
-// components/BenefitCard.tsx
 import React from 'react';
-
-interface BenefitCardProps {
-  icon?: React.ReactNode;
-  title: string;
-  description: string;
-}
+import { BenefitCardProps } from './interfaces';
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description }) => {
   return (

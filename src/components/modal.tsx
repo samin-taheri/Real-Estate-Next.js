@@ -1,17 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Button from './button';
-
-interface ModalProps {
-  closeModal: () => void;
-  step: number;
-  selectedOption: string;
-  selectedOptionForMoney: string;
-  handleSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  handleSelectChangeForMoney: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  nextStep: () => void;
-}
+import {ModalProps} from './interfaces';
 
 const Modal: React.FC<ModalProps> = ({
   closeModal,

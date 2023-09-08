@@ -1,10 +1,6 @@
-// QuizProgressBar.tsx
 import React from 'react';
 import ProgressBar from './progress-bar';
-
-interface QuizProgressBarProps {
-  progress: number;
-}
+import {QuizProgressBarProps} from './interfaces';
 
 const QuizProgressBar: React.FC<QuizProgressBarProps> = ({ progress }) => (
   <ProgressBar progress={progress} />

@@ -1,14 +1,5 @@
-// Button.tsx
-import React, { ReactNode } from 'react';
-
-interface ButtonProps {
-  children: ReactNode;
-  onClick?: () => void;
-  disabled?: boolean;
-  className?: string;
-  iconLeft?: ReactNode;
-  iconRight?: ReactNode;
-}
+import React from 'react';
+import {ButtonProps} from './interfaces';
 
 const Button: React.FC<ButtonProps> = ({
   children,

@@ -4,18 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faFireAlt } from "@fortawesome/free-solid-svg-icons";
 import Button from "./button";
-
-interface PostProps {
-  post: {
-    id: number;
-    title: string;
-    description: string;
-    location: string;
-    image: string;
-    permit: string;
-    priceRange: string;
-  };
-}
+import {PostProps} from './interfaces';
 
 const Post: React.FC<PostProps> = ({ post }) => {
   const [showButton, setShowButton] = useState(false);

@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
+import {RightMenuProps} from './interfaces';
 
-interface RightMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
-  children?: React.ReactNode;
-}
 const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
 
   const handleItemClick = (item: string) => {

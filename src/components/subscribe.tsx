@@ -1,5 +1,4 @@
 import React from "react";
-import WhatsAppButton from "./whatsapp-button";
 import InfoSection from "./info-section";
 import Button from "./button";
 

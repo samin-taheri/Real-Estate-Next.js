@@ -1,4 +1,3 @@
-// TableSection.tsx
 import React from 'react';
 import InfoSection from './info-section';
 import Table from './table';

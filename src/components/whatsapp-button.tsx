@@ -1,8 +1,7 @@
-// components/WhatsAppButton.tsx
 import React from 'react';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '+905077525816'; // Replace with your WhatsApp number
+  const phoneNumber = '+905077525816';
   const message = 'Hello, I have a question.';
 
   const openWhatsAppChat = () => {

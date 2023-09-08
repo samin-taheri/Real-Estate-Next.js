@@ -1,4 +1,3 @@
-// Table.tsx
 import React from 'react';
 import TableRow from './table-row';
 

@@ -1,9 +1,5 @@
-// components/InfoSection.tsx
 import React, { ReactNode } from 'react';
-
-interface InfoSectionProps {
-  children: ReactNode;
-}
+import {InfoSectionProps} from './interfaces';
 
 const InfoSection: React.FC<InfoSectionProps> = ({ children }) => {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import ResidenceInfo from './residence-info';
 import BenefitsOfWorkingCard from './benefits-of-working-card';
 
 const BenefitsOfWorking: React.FC = () => {

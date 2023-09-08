@@ -1,13 +1,6 @@
-// components/PropertyInfo.tsx
 import React from 'react';
 import Button from './button';
-
-interface PropertyInfoProps {
-  title: string;
-  description: string;
-  image: string;
-  button: string;
-}
+import {PropertyInfoProps} from './interfaces';
 
 const PropertyInfo: React.FC<PropertyInfoProps> = ({ title, description, image, button }) => {
     
