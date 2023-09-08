@@ -4,8 +4,8 @@ import Button from './button';
 const CompletedQuiz: React.FC = () => {
   return (
     <div>
-    <div className='flex'>
-    <div className=" mb-10 md:justify-start justify-center items-end w-1/2" style={{width: '500px'}}>
+    <div className='flex flex-col sm:flex-row md:flex-row'>
+    <div className=" mb-10 md:justify-start justify-center items-end lg:w-1/2 md:w-1/2 sm:w-full" style={{maxWidth: '500px'}}>
     <h2 className="question-text pt-4">The collection is almost ready. You will receive it in a couple of minutes. 🤩</h2>
 
       <div className="pb-3">
@@ -50,10 +50,8 @@ const CompletedQuiz: React.FC = () => {
       Get a selection
     </Button>
       </div>
-      <div className="w-1/2">
-      <div className="question-container w-1/2" style={{width: '500px'}}>
-      <img src="/bg-29.jpg" alt="bg-29" className="w-45 h-45" />
-      </div>
+      <div className="question-container lg:w-1/2 md:w-1/2 sm:w-full sm:mt-0" style={{maxWidth: '450px'}}>
+      <img src="/bg-29.jpg" alt="bg-29" className="w-full h-full hidden sm:block" />
       </div>
       </div>
   </div>
