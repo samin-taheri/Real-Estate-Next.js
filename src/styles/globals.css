@@ -279,4 +279,6 @@
   background:rgba(255, 249, 230, 1);  
   z-index: -1; 
 }
-
+.background-card {
+  background:rgba(255, 249, 230, 1);  
+}

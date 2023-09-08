@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
             <div className="flex justify-center">
               <Button
                 onClick={openPopup}
-                className="px-24 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400 animate__animated animate__fadeInLeft"
+                className="px-16 py-3 hover:from-yellow-600 hover:to-yellow-500 text-white rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-400 animate__animated animate__fadeInLeft"
               >
                 Get Started
               </Button>
