@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Menu from "./right-menu";
 import Icon from "./icon";
-import { faEllipsis, faXmark } from '@fortawesome/free-solid-svg-icons'; 
+import { faEllipsis, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./navigation";
 import ContactInfo from "./contact-info";
 
@@ -19,50 +19,56 @@ const Header = () => {
     };
 
     if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMenuOpen]);
 
-
   const openMenu = () => {
     setMenuOpen(true);
-    setCurrentIcon(faXmark); 
-    document.body.classList.add('disable-scroll');
+    setCurrentIcon(faXmark);
+    document.body.classList.add("disable-scroll");
   };
 
   const closeMenu = () => {
     setMenuOpen(false);
-    setCurrentIcon(faEllipsis); 
-    document.body.classList.remove('disable-scroll');
+    setCurrentIcon(faEllipsis);
+    document.body.classList.remove("disable-scroll");
   };
 
   return (
-    <header className="text-gray-600 body-font justify-between">
-        <div className={isMenuOpen ? 'disable-scroll' : ''}>
-    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center md:justify-around sm:justify-around ">
-      <img className="w-30 h-30 sm:pb-4 pb-4" alt="hero" src="https://jasminehomex.com/images/logo.gif"/>
-      <Navigation/>
-      <div>
-      <div className="flex items-center mb-3 sm:justify-center md:justify-center sm:pt-4 md:pt-4 pt-4" ref={menuRef} tabIndex={-1}>
-          <Menu isOpen={isMenuOpen} onClose={closeMenu}>
-            </Menu>
-            <Icon
-            icon={currentIcon}
-            onClick={isMenuOpen ? closeMenu : openMenu}
-            isOpen={isMenuOpen}
+    <header className="text-gray-600 body-font justify-between header">
+      <div className={isMenuOpen ? "disable-scroll" : ""}>
+        <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center md:justify-around sm:justify-around">
+          <img
+            className="w-30 h-30 sm:pb-4 pb-2 pt-2"
+            alt="hero"
+            src="https://jasminehomex.com/images/logo.gif"
           />
-        <ContactInfo/>
+          <Navigation />
+          <div>
+            <div
+              className="flex items-center mb-3 sm:justify-center md:justify-center sm:pt-4 md:pt-4 pt-4"
+              ref={menuRef}
+              tabIndex={-1}
+            >
+              <Menu isOpen={isMenuOpen} onClose={closeMenu}></Menu>
+              <Icon
+                icon={currentIcon}
+                onClick={isMenuOpen ? closeMenu : openMenu}
+                isOpen={isMenuOpen}
+              />
+              <ContactInfo />
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
-    </div>
-  </header>
+      </div>
+    </header>
   );
 };
 

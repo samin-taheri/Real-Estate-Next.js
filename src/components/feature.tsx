@@ -4,7 +4,7 @@ import Button from './button';
 
 const Feature = () => {
   return (
-    <section className="text-gray-600 body-font" id="section5">
+    <section className="text-gray-600 body-font" id="section3">
       <InfoSection>
         <div className="lg:w-1/2 px-6">
           <h2 className="m-5 title-font text-4xl font-semibold text-gray-700">Still have questions about obtaining a residence permit or Turkish citizenship?</h2>

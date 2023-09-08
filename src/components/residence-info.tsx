@@ -3,7 +3,7 @@ import InfoSection from './info-section';
 
 const ResidenceInfo: React.FC = () => {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font" id='section3'>
     <InfoSection>
       <div className="lg:w-1/2 px-6 py-3">
       <h2 className="m-10 title-font text-4xl font-semibold text-gray-700">Easy to obtain residence permit and citizenship</h2>

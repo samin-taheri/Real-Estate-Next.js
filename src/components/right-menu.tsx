@@ -12,12 +12,12 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
   };
 
   const menuClassName = isOpen
-    ? 'fixed top-0 right-0 h-full w-80 bg-white transition-all duration-300 ease-in-out overflow-y-auto shadow-2xl pt-20'
+    ? 'fixed top-0 right-0 h-full w-96 bg-white transition-all duration-300 ease-in-out overflow-y-auto shadow-2xl pt-20'
     : 'fixed top-0 right-0 h-full w-0 bg-white transition-all duration-300 ease-in-out overflow-y-auto shadow-2xl pt-20';
 
   return (
     <div className={menuClassName}>
-      <div className="w-80 p-4">
+      <div className="w-96 p-4">
       {children}
       <ul className="menu-bar">
         <li className="menu-item flex items-center">

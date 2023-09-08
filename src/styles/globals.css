@@ -237,3 +237,46 @@
   .shadow-lg-2 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
   }
+  .wavy-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ebb305; /* Set your desired background color */
+    z-index: -1; /* Ensure it's behind other content */
+    opacity: 0.3;
+  }
+  .header-container {
+    position: relative; /* Create a positioning context for child elements */
+    z-index: 1; /* Ensure the header content is in front */
+  }
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #007BFF; /* Background color of the rectangle */
+  }
+  
+  .background-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%; /* Adjust the width of the rectangle */
+    height: 100%;
+    background-color: #FFD700; /* Background color of the rectangle */
+    opacity: 0.5; /* Adjust the opacity of the rectangle */
+    z-index: -1; /* Place the rectangle behind other content */
+  }
+  .bg-gradient-yellow {
+    background: rgba(255, 244, 209, 1);
+  }
+  
+  .bg-gradient-yellow-2 {
+    background: rgba(255, 247, 220, 1); 
+  }
+.header {
+  background:rgba(255, 249, 230, 1);  
+  z-index: -1; 
+}
+
