@@ -1,10 +1,20 @@
 import React from 'react';
 
+const imageUrls = [
+  'bg-24.jpg',
+  'bg-21.jpg',
+  'bg-28.jpg',
+  'bg-25.jpg',
+  'bg-26.jpg',
+  'bg-27.jpg',
+];
+
 interface QuizQuestionProps {
-    question: string;
-    answers: string[];
-    selectedAnswer: number | null;
-    onAnswerClick: (answerIndex: number) => void;
+  question: string;
+  answers: string[];
+  selectedAnswer: number | null;
+  onAnswerClick: (answerIndex: number) => void;
+  currentImageIndex: number;
 }
 
 const QuizQuestion: React.FC<QuizQuestionProps> = ({
@@ -12,23 +22,32 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
   answers,
   selectedAnswer,
   onAnswerClick,
+  currentImageIndex,
 }) => {
   return (
-    <div className="flex">
-    <div className="question-container w-1/2" style={{width: '500px'}}>
-      <h2 className="question-text">{question}</h2>
-      <ul className="answers-list">
-        {answers.map((answer, index) => (
-          <li
-            key={index}
-            onClick={() => onAnswerClick(index)}
-            className={`answer-item ${selectedAnswer === index ? 'selected-answer' : ''}`}
-          >
-            {answer}
-          </li>
-        ))}
-      </ul>
-    </div>    
+    <div className="flex flex-col sm:flex-row md:flex-row">
+      <div className="question-container lg:w-1/2 md:w-1/2 sm:w-full" style={{ maxWidth: '500px' }}>
+        <h2 className="question-text">{question}</h2>
+        <ul className="answers-list">
+          {answers.map((answer, index) => (
+            <li
+              key={index}
+              onClick={() => onAnswerClick(index)}
+              className={`answer-item ${selectedAnswer === index ? 'selected-answer' : ''}`}
+            >
+              {answer}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="question-container lg:w-1/2 md:w-1/2 sm:w-full mt-4 sm:mt-0" style={{ maxWidth: '450px' }}>
+        {/* Use hidden sm:block to hide the image on screens smaller than sm (small) */}
+        <img
+          src={imageUrls[currentImageIndex]}
+          alt={`Image ${currentImageIndex + 1}`}
+          className="w-full h-auto hidden sm:block"
+        />
+      </div>
     </div>
   );
 };
