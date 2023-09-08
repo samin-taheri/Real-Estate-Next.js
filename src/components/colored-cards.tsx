@@ -1,5 +1,5 @@
 import React from 'react';
-import {ColoredCardsProps} from './interfaces'
+import { ColoredCardsProps } from '@/types';
 
 const ColoredCards: React.FC<ColoredCardsProps> = ({ title, description, backgroundColor, link, linkColor }) => {
     const CardStyle = {

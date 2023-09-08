@@ -1,5 +1,5 @@
 import React from 'react';
-import {QuizQuestionProps} from './interfaces';
+import { QuizQuestionProps } from '@/types';
 
 const imageUrls = [
   'bg-24.jpg',

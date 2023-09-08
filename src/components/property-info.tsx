@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './button';
-import {PropertyInfoProps} from './interfaces';
+import { PropertyInfoProps } from '@/types';
 
 const PropertyInfo: React.FC<PropertyInfoProps> = ({ title, description, image, button }) => {
     

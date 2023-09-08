@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
-import {RightMenuProps} from './interfaces';
+import { RightMenuProps } from '@/types';
 
 const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
 

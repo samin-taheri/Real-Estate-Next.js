@@ -1,5 +1,5 @@
 import React from 'react';
-import { BenefitCardProps } from './interfaces';
+import { BenefitCardProps } from '@/types';
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description }) => {
   return (

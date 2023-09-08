@@ -1,5 +1,5 @@
 import React from 'react';
-import {TableRowProps} from './interfaces';
+import { TableRowProps } from '@/types';
 
 const TableRow: React.FC<TableRowProps> = ({ title, permitValue, citizenshipValue, icon }) => {
   return (

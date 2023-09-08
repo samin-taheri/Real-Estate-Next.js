@@ -1,5 +1,5 @@
 import React from 'react';
-import {BenefitsOfWorkingCardProps} from './interfaces';
+import { BenefitsOfWorkingCardProps } from '@/types';
 
 const BenefitsOfWorkingCard: React.FC<BenefitsOfWorkingCardProps> = ({ icon, title, description, color }) => {
     const CardStyle = {

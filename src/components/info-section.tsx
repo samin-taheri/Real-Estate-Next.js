@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import {InfoSectionProps} from './interfaces';
+import React from 'react';
+import { InfoSectionProps } from '@/types';
 
 const InfoSection: React.FC<InfoSectionProps> = ({ children }) => {
   return (
