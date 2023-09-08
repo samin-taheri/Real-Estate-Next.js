@@ -282,3 +282,10 @@
 .background-card {
   background:rgba(255, 249, 230, 1);  
 }
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Set your background color */
+}
