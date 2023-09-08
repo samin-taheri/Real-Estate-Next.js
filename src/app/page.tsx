@@ -9,6 +9,7 @@ import PropertyInfoList from "@/components/property-info-list";
 import Subscribe from "@/components/subscribe";
 import BenefitsOfWorking from "@/components/benefits-of-working";
 import ResidenceInfo from "@/components/residence-info";
+import AboutUs from "@/components/about-us";
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Subscribe/>
       <TableSection/>
       <RealEstatePage/>
+      <AboutUs/>
       <Feature />
     </main>
   );

@@ -1,5 +1,4 @@
 'use client';
-// components/HeroSection.tsx
 import React, { useState } from 'react';
 import CatalogPopup from './catalog-popup';
 import Button from './button';
@@ -17,7 +16,6 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="text-gray-600 body-font" id="hero">
-      {/* Apply the new background class to create the background shape */}
       <div className="bg-rectangle bg-cover bg-center">
         <div className="container mx-auto flex xl:px-20 md:px-4 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
