@@ -4,6 +4,7 @@ import { faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import { RightMenuProps } from '@/types';
+import Link from 'next/link';
 
 const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
 
@@ -24,7 +25,8 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
           <FontAwesomeIcon icon={faSquareCheck} className="menu-icon mr-2" onClick={() => handleItemClick('Item 1')}/>Residential Property
         </li>
         <li className="menu-item flex items-center">
-          <FontAwesomeIcon icon={faListAlt} className="menu-icon mr-2" onClick={() => handleItemClick('Item 2')}/>Blog
+          <FontAwesomeIcon icon={faListAlt} className="menu-icon mr-2" onClick={() => handleItemClick('Item 2')}/>
+          <Link href="/pages/about">Blog</Link>
         </li>
         <li className="menu-item flex items-center">
           <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>Contact

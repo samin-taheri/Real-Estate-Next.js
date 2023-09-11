@@ -5,6 +5,7 @@ import Icon from "./icon";
 import { faEllipsis, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./navigation";
 import ContactInfo from "./contact-info";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -45,11 +46,13 @@ const Header = () => {
     <header className="text-gray-600 body-font justify-between header">
       <div className={isMenuOpen ? "disable-scroll" : ""}>
         <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center md:justify-around sm:justify-around">
+        <Link href="/">
           <img
             className="w-30 h-30 sm:pb-4 pb-2 pt-2"
             alt="hero"
             src="https://jasminehomex.com/images/logo.gif"
           />
+          </Link>
           <Navigation />
           <div>
             <div
