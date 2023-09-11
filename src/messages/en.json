@@ -147,6 +147,11 @@
       "quiz-question-6": "When do you plan to buy the property?",
       "quiz-answer-6-1": "Need urgently",
       "quiz-answer-6-2": "Within 3 months",
-      "quiz-answer-6-3": "Within 6 months"
+      "quiz-answer-6-3": "Within 6 months",
+      "contact-us-page-title": "Contact Form",
+      "contact-us-page-subtitle": "Your thoughts are important to us!",
+      "your-email-placeholder": "Your Email",
+      "your-message-placeholder": "Your Message",
+      "contact-us-feedback": "Feedback"
     }
   }

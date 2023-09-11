@@ -28,11 +28,11 @@ const RightMenu: React.FC<RightMenuProps> = ({ isOpen, children }) => {
           <FontAwesomeIcon icon={faSquareCheck} className="menu-icon mr-2" onClick={() => handleItemClick('Item 1')}/>{t("menu1")}
         </li>
         <li className="menu-item flex items-center">
-          <FontAwesomeIcon icon={faListAlt} className="menu-icon mr-2" onClick={() => handleItemClick('Item 2')}/>
-          <Link href="/pages/about">{t("menu2")}</Link>
+          <FontAwesomeIcon icon={faListAlt} className="menu-icon mr-2" onClick={() => handleItemClick('Item 2')}/>{t("menu2")}
         </li>
         <li className="menu-item flex items-center">
-          <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>{t("menu3")}
+          <FontAwesomeIcon icon={faMessage} className="menu-icon mr-2" onClick={() => handleItemClick('Item 3')}/>
+          <Link href="/contact-us">{t("menu3")}</Link>
         </li>
       </ul>
       <div className="pt-80 pl-5">

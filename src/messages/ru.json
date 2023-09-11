@@ -147,6 +147,12 @@
     "quiz-question-6": "Когда вы планируете купить недвижимость?",
     "quiz-answer-6-1": "Нужно срочно",
     "quiz-answer-6-2": "В течение 3 месяцев",
-    "quiz-answer-6-3": "В течение 6 месяцев"
+    "quiz-answer-6-3": "В течение 6 месяцев",
+    "contact-us-page-title": "Форма обратной связи",
+    "contact-us-page-subtitle": "Нам важны ваши мысли!",
+    "your-email-placeholder": "Ваш адрес электронной почты",
+    "your-message-placeholder": "Ваше сообщение",
+    "contact-us-feedback": "Обратная связь"
+
   }
 }
