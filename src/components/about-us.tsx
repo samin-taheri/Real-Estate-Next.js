@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import InfoSection from "./info-section";
 import Button from "./button";
+import {useTranslations} from 'next-intl';
 
 const Subscribe = () => {
+  const t = useTranslations('Index');
   return(
     <section className="text-gray-600 body-font">
     <InfoSection>
@@ -10,9 +13,9 @@ const Subscribe = () => {
       <img className="w-18 h-18" alt="hero" src="/bg-22.jpg"/>
       </div>
       <div className="lg:w-1/2 px-6 py-3">
-      <span className="text-xs font-semibold inline-block py-2 px-2 uppercase rounded-full text-yellow-500 bg-yellow-100 ml-5">who we are</span>
-        <h2 className="m-5 title-font text-4xl font-semibold text-gray-700">We are Offering The Best Real Esate Property For All</h2>
-        <p className="m-5">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, and going through the cites.</p>
+      <span className="text-xs font-semibold inline-block py-2 px-2 uppercase rounded-full text-yellow-500 bg-yellow-100 ml-5">{t("about-us-subheader")}</span>
+        <h2 className="m-5 title-font text-4xl font-semibold text-gray-700">{t("about-us-title")}</h2>
+        <p className="m-5">{t("about-us-subtitle")}</p>
         <div className="flex">
         <div className="flex m-5">
         <div className="w-16 h-16 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-4">
@@ -22,7 +25,7 @@ const Subscribe = () => {
         </div>
             <div className="justify-row">
                 <h2 className="ml-4 title-font text-4xl font-semibold text-gray-700">55K</h2>
-                <p className="ml-4 mt-4">Satisfied People</p>
+                <p className="ml-4 mt-4">{t("about-us-satisfied-people")}</p>
             </div>
             </div>
             <div className="flex m-5">
@@ -33,13 +36,13 @@ const Subscribe = () => {
             </div>
             <div className="justify-row">
                 <h2 className="ml-4 title-font text-4xl font-semibold text-gray-700">11K</h2>
-                <p className="ml-4 mt-4">Verified property</p>
+                <p className="ml-4 mt-4">{t("about-us-verified-property")}</p>
             </div>
             </div>
         </div>
         <div className="mb-5 mt-3 flex w-full md:justify-start justify-center items-end">
       <Button
-        className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">Contact with us
+        className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">{t("about-us-button")}
       </Button>
     </div>
       </div>

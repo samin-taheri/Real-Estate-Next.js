@@ -1,7 +1,10 @@
+"use client";
 import React from 'react';
 import PropertyInfo from './property-info';
+import {useTranslations} from 'next-intl';
 
 const PropertyInfoList: React.FC = () => {
+  const t = useTranslations('Index');
   return (
     <section className="text-gray-600 body-font" id="section2">
       <div className="container px-5 py-8 mx-auto">
@@ -9,28 +12,22 @@ const PropertyInfoList: React.FC = () => {
         <div className="container p-6 flex-wrap">
           <div className="grid lg:grid-cols-3 md:geid-cols-1 gap-6">
             <PropertyInfo
-              title="Buy a property"
-              description="All the Lorem Ipsum generators on the Internet 
-              tend to repeat predefined chunks as necessary, 
-              making this the first true."
+              title={t("property-info-title-1")}
+              description={t("property-info-subtitle-1")}
               image= "/bg-14.jpg"
-              button="Find a home"
+              button={t("property-info-button-1")}
             />
             <PropertyInfo
-              title="Sell property"
-              description="All the Lorem Ipsum generators on the Internet 
-              tend to repeat predefined chunks as necessary, 
-              making this the first true."
+              title={t("property-info-title-2")}
+              description={t("property-info-subtitle-2")}
               image= "/bg-23.jpg"
-              button="Place an ad"
+              button={t("property-info-button-2")}
             />
             <PropertyInfo
-              title="Rent a property"
-              description="All the Lorem Ipsum generators on the Internet 
-              tend to repeat predefined chunks as necessary, 
-              making this the first true."
+              title={t("property-info-title-3")}
+              description={t("property-info-subtitle-3")}
               image= "/bg-22.jpg"
-              button='Find a rental'
+              button={t("property-info-button-3")}
             />
           </div>
         </div>

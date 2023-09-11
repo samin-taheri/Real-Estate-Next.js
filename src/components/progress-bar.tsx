@@ -1,13 +1,17 @@
+"use client";
 import React from "react";
 import { ProgressBarProps } from '@/types';
+import {useTranslations} from 'next-intl';
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
+  const t = useTranslations('Index');
+
   return (
     <div className="relative">
       <div className="flex mb-2 items-center justify-between">
         <div>
           <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-gray-200 mb-3">
-          Survey passed on:
+          {t("survey-passed-on")}
           </span>
         </div>
       </div>

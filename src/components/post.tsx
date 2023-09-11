@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faFireAlt } from "@fortawesome/free-solid-svg-icons";
 import Button from "./button";
-import {PostProps} from './interfaces';
+import {PostProps} from '@/types';
+import {useTranslations} from 'next-intl';
 
 const Post: React.FC<PostProps> = ({ post }) => {
+  const t = useTranslations('Index');
   const [showButton, setShowButton] = useState(false);
 
   const handleMouseEnter = () => {
@@ -43,7 +45,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
         <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
         <div className="flex justify-end p-10 mt-auto">
-        <Button className={`hidden-button ${showButton ? "visible" : ""}`}>View Details</Button>
+        <Button className={`hidden-button ${showButton ? "visible" : ""}`}>{t("view-details")}</Button>
         </div>
     </div>
   );

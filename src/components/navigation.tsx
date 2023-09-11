@@ -1,7 +1,9 @@
 import { Link } from 'react-scroll';
 import React from "react";
+import {useTranslations} from 'next-intl';
 
 const Navigation = () => {
+  const t = useTranslations('Index');
   return (
     <nav className="flex flex-wrap items-center text-base justify-center">
       <Link
@@ -14,7 +16,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        Citizenship
+        {t("citizenship")}
       </Link>
       <Link
         activeClass="active"
@@ -26,7 +28,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        Property
+       {t("property")} 
       </Link>
       <Link
         activeClass="active"
@@ -38,7 +40,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        About Us
+        {t("about-us")} 
       </Link>
       <Link
         activeClass="active"
@@ -50,7 +52,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        Contact
+        {t("contact")} 
       </Link>
       <Link
         activeClass="active"
@@ -62,7 +64,7 @@ const Navigation = () => {
         duration={800}
         className="mr-7 hover:text-yellow-600 hover:underline"
       >
-        Other Contries
+        {t("other-contries")} 
       </Link>
       </nav>
   );

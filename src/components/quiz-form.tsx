@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import QuizQuestion from './quiz-questions'; 
 import QuizProgressBar from './quiz-progress-bar';
@@ -6,7 +7,8 @@ import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import Button from './button';
 import CompletedQuiz from './completed-quiz';
-import {QuizFormProps} from './interfaces';
+import {QuizFormProps} from '@/types';
+import {useTranslations} from 'next-intl';
 
 const QuizForm: React.FC<QuizFormProps> = ({
   currentQuestionIndex,
@@ -18,7 +20,9 @@ const QuizForm: React.FC<QuizFormProps> = ({
   onAnswerClick, 
   quizQuestions,
   currentImageIndex,
-}) => (
+}) =>  {
+  const t = useTranslations('Index');
+  return(
   <div>
     <QuizProgressBar progress={progress} />
     {quizCompleted ? (
@@ -33,7 +37,9 @@ const QuizForm: React.FC<QuizFormProps> = ({
       currentImageIndex={currentImageIndex}
     />
   </div>
+  
 )}
+
 
     <div className="flex justify-between">
     {!quizCompleted && (
@@ -43,7 +49,7 @@ const QuizForm: React.FC<QuizFormProps> = ({
       disabled={currentQuestionIndex === 0}
       iconLeft={<FontAwesomeIcon icon={faAnglesLeft} className="mr-3" /> }
     >
-      Previous
+      {t("previous-button")}
     </Button>
     )}
     {!quizCompleted && (
@@ -52,11 +58,12 @@ const QuizForm: React.FC<QuizFormProps> = ({
       disabled={selectedAnswer === null && !quizCompleted}
       iconRight={<FontAwesomeIcon icon={faAnglesRight} className="ml-3" /> }
     >
-      Next
+      {t("next-button")}
     </Button>
     )}
     </div>
   </div>
-);
+  );
+};
 
 export default QuizForm;

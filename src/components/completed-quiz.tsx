@@ -1,16 +1,19 @@
+"use client";
 import React from 'react';
 import Button from './button';
+import {useTranslations} from 'next-intl';
 
 const CompletedQuiz: React.FC = () => {
+  const t = useTranslations('Index');
   return (
     <div>
     <div className='flex flex-col sm:flex-row md:flex-row'>
     <div className=" mb-10 md:justify-start justify-center items-end lg:w-1/2 md:w-1/2 sm:w-full" style={{maxWidth: '500px'}}>
-    <h2 className="question-text pt-4">The collection is almost ready. You will receive it in a couple of minutes. 🤩</h2>
+    <h2 className="question-text pt-4">{t("completed-quiz-title")}🤩</h2>
 
       <div className="pb-3">
         <input
-          placeholder="Your Name"
+          placeholder={t("your-name-placeholder")}
           type="text"
           id="hero-field"
           name="hero-field"
@@ -19,7 +22,7 @@ const CompletedQuiz: React.FC = () => {
       </div>
       <div className="pb-3">
         <input
-          placeholder="Your Phone"
+          placeholder={t("your-phone-placeholder")}
           type="text"
           id="hero-field"
           name="hero-field"
@@ -47,7 +50,7 @@ const CompletedQuiz: React.FC = () => {
       </a>
     </div>
     <Button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">
-      Get a selection
+      {t("get-a-selection-button")}
     </Button>
       </div>
       <div className="question-container lg:w-1/2 md:w-1/2 sm:w-full sm:mt-0" style={{maxWidth: '450px'}}>

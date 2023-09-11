@@ -114,4 +114,7 @@ export interface BenefitCardProps {
     citizenshipValue: string;
     icon?: React.ReactNode;
   }
+  export interface CatalogPopupProps {
+    onClose: () => void;
+  }
   

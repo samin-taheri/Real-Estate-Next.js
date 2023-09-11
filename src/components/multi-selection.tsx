@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import QuizForm from './quiz-form';
-import {QuizQuestion} from './interfaces';
+import { QuizQuestion } from '@/types';
+import {useTranslations} from 'next-intl';
 
 const MultipleChoiceQuestion: React.FC = () => {
+    const t = useTranslations('Index');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [progress, setProgress] = useState<number>(0);
     const [quizCompleted, setQuizCompleted] = useState(false);
@@ -11,28 +13,28 @@ const MultipleChoiceQuestion: React.FC = () => {
     
     const [quizQuestions] = useState<QuizQuestion[]>([
       {
-        question: 'What is the purpose of buying real estate?',
-        answers: ['For investment', 'For life', 'For temporary stay and recreation', 'For child/student'],
+        question: t('quiz-question-1'), 
+        answers: [t('quiz-answer-1-1'), t('quiz-answer-1-2'), t('quiz-answer-1-3'), t('quiz-answer-1-4')],
       },
       {
-        question: 'Select the type of property you are interested in:',
-        answers: ['Apartment/Apartment', 'Villa/Penthouse', 'Land plot', 'commercial real estate'],
+        question: t('quiz-question-2'), 
+        answers: [t('quiz-answer-2-1'), t('quiz-answer-2-2'), t('quiz-answer-2-3'), t('quiz-answer-2-4')],
       },
       {
-        question: 'Choose the right layout:',
-        answers: ['1+1 (two-room apartment)', '2+1 (three-room apartment)', '3+1 (four-room apartment)', '4+1 or more'],
+        question: t('quiz-question-3'), 
+        answers: [t('quiz-answer-3-1'), t('quiz-answer-3-2'), t('quiz-answer-3-3'), t('quiz-answer-3-4')],
       },
       {
-        question: 'What budget are you looking for?',
-        answers: ['up to 100 000 €', 'up to 150 000 €', 'up to 250 000 €', 'Over 250,000 €'],
+        question: t('quiz-question-4'), 
+        answers: [t('quiz-answer-4-1'), t('quiz-answer-4-2'), t('quiz-answer-4-3'), t('quiz-answer-4-4')],
       },
       {
-        question: 'Need an installment or loan?',
-        answers: ['No', 'Yes'],
+        question: t('quiz-question-5'), 
+        answers: [t('quiz-answer-5-1'), t('quiz-answer-5-2')],
       },
       {
-        question: 'When do you plan to buy the property?',
-        answers: ['Need urgently', 'Within 3 months', 'Within 6 months'],
+        question: t('quiz-question-6'), 
+        answers: [t('quiz-answer-6-1'), t('quiz-answer-6-2'), t('quiz-answer-6-3')],
       }
     ]);
   
