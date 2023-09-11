@@ -7,7 +7,7 @@ const BenefitsOfWorking: React.FC = () => {
       <div className="container px-5 py-8 mx-auto">
       <div className="flex flex-wrap w-full mb-10 flex-col items-center text-center">
          <h1 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 animate__animated animate__fadeInLeft">
-          Benefits of working with us sdkfnkfn
+          Benefits of working with us
          </h1>
        </div>
         <div className="container p-6 flex-wrap">

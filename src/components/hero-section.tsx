@@ -2,8 +2,11 @@
 import React, { useState } from 'react';
 import CatalogPopup from './catalog-popup';
 import Button from './button';
+import {useTranslations} from 'next-intl';
 
 const HeroSection: React.FC = () => {
+  const t = useTranslations('Index');
+
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const openPopup = () => {
@@ -19,6 +22,7 @@ const HeroSection: React.FC = () => {
       <div className="bg-rectangle bg-cover bg-center">
         <div className="container mx-auto flex xl:px-20 md:px-4 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <h1>{t('title')}</h1>
             <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-3 text-gray-700 animate__animated animate__fadeInLeft">We can help you to buy a 
               <br className="hidden lg:inline-block animate__animated animate__fadeInLeft"/>property in Turkey and get a residence permit
             </h1>
