@@ -9,7 +9,7 @@ const OurServices: React.FC = () => {
       <div className="bg-rectangle bg-cover bg-center">
         <div className="container mx-auto px-4 py-8 lg:py-24">
           <div className="flex flex-col text-center w-full mb-8">
-            <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-3 text-gray-700 animate__animated animate__fadeInLeft">
+            <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-3 text-gray-700 animate__animated animate__fadeInDown">
               {t("our-services")}
             </h1>
           </div>

@@ -12,10 +12,10 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-    className="fixed bottom-8 left-8 bg-yellow-400 text-white p-2 w-12 h-12 rounded-full shadow-md cursor-pointer hover:bg-yellow-500"
+    className="fixed bottom-8 left-8 bg-yellow-200 text-gray-500 p-2 w-10 h-10 rounded-full shadow-md cursor-pointer hover:bg-yellow-300 hover:text-gray-600 "
     onClick={handleScrollToTop}
     >
-      <FontAwesomeIcon icon={faArrowUp} size="lg" />
+      <FontAwesomeIcon icon={faArrowUp} size="1x" />
     </button>
     
   );

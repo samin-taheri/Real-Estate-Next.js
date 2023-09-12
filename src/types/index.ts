@@ -117,4 +117,7 @@ export interface BenefitCardProps {
   export interface CatalogPopupProps {
     onClose: () => void;
   }
-  
+  export interface AccordionItemProps {
+    question: string;
+    answer: string;
+  }

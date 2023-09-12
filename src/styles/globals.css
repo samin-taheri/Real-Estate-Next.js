@@ -289,3 +289,39 @@
   height: 100vh;
   background-color: #fff; /* Set your background color */
 }
+/* styles.css */
+.accordion-item {
+  margin-bottom: 25px;
+}
+
+.accordion-button {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  outline: none;
+  transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Smooth background color transition */
+}
+
+.accordion-answer {
+  padding: 0;
+  background-color: transparent; /* Initially transparent */
+  border: 0.5px solid #ddd;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: max-height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); /* Smooth transitions for max-height, padding, and background-color */
+}
+
+.accordion-item.open .accordion-button {
+  background-color: #e5e7eb; /* Background color when accordion is open */
+}
+
+.accordion-item.open .accordion-answer {
+  padding: 20px; /* Desired padding when accordion is open */
+  background-color: #fff; /* Background color when accordion is open */
+  max-height: 400px; /* Adjust the maximum height as needed */
+}

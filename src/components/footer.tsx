@@ -30,7 +30,7 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest mb-3">{t("footer-header-3")}</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">{t("footer-subheader-3")}</a>
+            <a href='/questions' className="text-gray-600 hover:text-gray-800">{t("footer-subheader-3")}</a>
           </li>
         </nav>
         <h2 className="title-font font-medium text-gray-900 tracking-widest mb-3">{t("footer-header-4")}</h2>
