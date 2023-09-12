@@ -2,6 +2,7 @@
 import React from 'react'
 import Button from './button';
 import {useTranslations} from 'next-intl';
+import Link from 'next/link';
   
 const Footer = () => {
   const t = useTranslations('Index');
@@ -14,13 +15,13 @@ const Footer = () => {
         <h2 className="title-font font-medium  text-gray-900 tracking-widest mb-3">{t("footer-header-1")}</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">{t("footer-subheader-1")}</a>
+            <a href="/about-us" className="text-gray-600 hover:text-gray-800">{t("footer-subheader-1")}</a>
           </li>
         </nav>
         <h2 className="title-font font-medium text-gray-900 tracking-widest mb-3">{t("footer-header-2")}</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">{t("footer-subheader-2")}</a>
+            <a href='/our-services' className="text-gray-600 hover:text-gray-800">{t("footer-subheader-2")}</a>
           </li>
           
         </nav>
@@ -35,7 +36,7 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest mb-3">{t("footer-header-4")}</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">{t("footer-subheader-4")}</a>
+            <a href="/contact-us" className="text-gray-600 hover:text-gray-800">{t("footer-subheader-4")}</a>
           </li>
         </nav>
       </div>

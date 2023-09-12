@@ -10,6 +10,7 @@ const ContactUs: React.FC = () => {
       <div className="bg-rectangle bg-cover bg-center">
         <div className="container mx-auto px-5 py-12 md:py-24 lg:py-32 flex flex-col items-center animate__animated animate__fadeInLeft">
           <div className="w-full lg:w-1/2 bg-white rounded-xl p-10 flex flex-col items-center shadow-lg-2">
+          
             <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-3 text-gray-700">
               {t("contact-us-page-title")}
             </h1>
@@ -46,3 +47,10 @@ const ContactUs: React.FC = () => {
 };
 
 export default ContactUs;
+
+
+{/* <span className="bg-yellow-100 text-yellow-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" className="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span> */}
