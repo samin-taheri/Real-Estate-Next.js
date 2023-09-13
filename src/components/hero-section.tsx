@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CatalogPopup from './catalog-popup';
 import Button from './button';
 import {useTranslations} from 'next-intl';
@@ -8,6 +8,9 @@ const HeroSection: React.FC = () => {
   const t = useTranslations('Index');
 
   const [isPopupOpen, setPopupOpen] = useState(false);
+  const images: string[] = ["/bg-4.jpg", "/bg-32.jpg", "/bg-33.jpg", "/bg-34.jpg", "/bg-35.jpg", "/bg-25.jpg", "/bg-26.jpg", "/bg-27.jpg", "/bg-28.jpg"];
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [isContentVisible, setContentVisible] = useState(false);
 
   const openPopup = () => {
     setPopupOpen(true);
@@ -16,6 +19,27 @@ const HeroSection: React.FC = () => {
   const closePopup = () => {
     setPopupOpen(false);
   };
+  useEffect(() => {
+    // Function to cycle through images
+    const nextImage = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    // Set an interval to change images every few seconds (e.g., every 5 seconds)
+    const interval = setInterval(nextImage, 4000);
+
+    // Clear the interval when the component unmounts to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []);
+  useEffect(() => {
+    // Delay showing content to sync with image transition
+    const contentTimeout = setTimeout(() => {
+      setContentVisible(true);
+    }, 500); // Adjust the delay as needed
+
+    return () => clearTimeout(contentTimeout);
+  }, []);
+
 
   return (
     <section className="text-gray-600 body-font" id="hero">
@@ -33,7 +57,23 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img className="object-cover object-center rounded" alt="hero" src="/bg-4.jpg"/>
+            <div className="hero-image-container">
+              <div
+                className="hero-image-slider"
+                style={{
+                  transform: `translateX(-${currentImageIndex * 100}%)`,
+                }}
+              >
+                {images.map((imageUrl, index) => (
+                  <img
+                    key={index}
+                    className="object-cover object-center rounded w-full h-full"
+                    alt="hero"
+                    src={imageUrl}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

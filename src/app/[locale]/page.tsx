@@ -17,13 +17,13 @@ export default function Home() {
     <main>
       <HeroSection />
       <Content />
+      <RealEstatePage/>
       <ResidenceInfo />
       <BenefitsOfWorking/>
       <PropertyInfoList/>
       <ColoredCardsList/>
       <Subscribe/>
       <TableSection/>
-      <RealEstatePage/>
       <AboutUs/>
       <Feature />
     </main>

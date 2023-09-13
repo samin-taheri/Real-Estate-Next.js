@@ -19,7 +19,7 @@ const RealEstatePage: React.FC = () => {
   ];
 
   return (
-    <div>
+    <section id="property">
       <PostList posts={posts} />
       <div className="flex justify-center">
 
@@ -28,7 +28,7 @@ const RealEstatePage: React.FC = () => {
         iconRight={<FontAwesomeIcon icon={faArrowRight} className="ml-2"/>}>{t("view-more")}
       </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

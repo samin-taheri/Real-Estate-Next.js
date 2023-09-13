@@ -19,7 +19,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
     setShowButton(false);
   };
   return (
-    <div className="relative mb-4 rounded-xl shadow-lg-2 hover:shadow-xl overflow-hidden flex flex-col transition-opacity" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="relative mb-4 rounded-xl shadow-lg-2 hover:shadow-xl overflow-hidden flex flex-col transition-opacity post-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <img
           src={post.image}
           alt={post.title}
@@ -38,7 +38,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         </div>
         </div>
         <div className="absolute top-24 left-4 z-10 flex flex-col">
-        <div className="bg-white bg-opacity-80 text-gray-900 py-1 px-2 rounded-2xl text-xs mb-2 flex items-center">
+        <div className="bg-yellow-100 bg-opacity-80 text-gray-900 py-1 px-2 rounded-2xl text-xs mb-2 flex items-center">
           <p className="leading-relaxed">{post.priceRange}</p>
         </div>
         </div>

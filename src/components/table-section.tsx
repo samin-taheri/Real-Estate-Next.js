@@ -8,7 +8,7 @@ const TableSection: React.FC = () => {
   const t = useTranslations('Index');
 
   return (
-    <section className="text-gray-600 body-font px-24" id="section4">
+    <section className="text-gray-600 body-font px-24" id="citizenship">
       <div className="text-center">
         <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700">
           {t("table-header-1")}

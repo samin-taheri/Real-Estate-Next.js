@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import WhatsAppButton from "./whatsapp-button";
 import ScrollToTopButton from "./scroll-to-top-button";
 import {useTranslations} from 'next-intl';
@@ -24,5 +25,4 @@ const ContactInfo = () => {
     </div>
   )
 };
-
 export default ContactInfo;

@@ -121,3 +121,6 @@ export interface BenefitCardProps {
     question: string;
     answer: string;
   }
+  export interface Message {
+    text: string;
+  }

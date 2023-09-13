@@ -9,7 +9,7 @@ const ContactUs: React.FC = () => {
       <div className="bg-rectangle bg-cover bg-center">
         <div className="container px-5 py-24 mx-auto flex flex-col md:flex-row">
           <div className="lg:w-2/3 md:w-full bg-white rounded-xl shadow-lg-2 overflow-hidden sm:mr-10 p-10 mt-8 md:mt-0 tems-center" style={{ marginBottom: '2rem' }}>
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+            <h2 className="text-gray-900 text-xl mb-1 font-medium title-font">
               {t("contact-us-page-title")}
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">
@@ -50,7 +50,7 @@ const ContactUs: React.FC = () => {
 
           <div className="lg:w-1/3 md:w-full bg-white rounded-xl tems-center shadow-lg-2 overflow-hidden p-5 flex" style={{ marginBottom: '2rem' }}>
             <div className="px-6">
-            <h2 className="text-gray-900 text-lg mb-1 font-medium title-font pt-5">
+            <h2 className="text-gray-900 text-xl mb-1 font-medium title-font pt-5">
               {t("contact-us-page-details")}
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">

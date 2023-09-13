@@ -8,8 +8,8 @@ const Navigation = () => {
     <nav className="flex flex-wrap items-center text-base justify-center">
       <Link
         activeClass="active"
-        href='/section2'
-        to="section2"
+        href='/citizenship'
+        to="citizenship"
         spy={true}
         smooth={true}
         offset={-70}
@@ -20,8 +20,8 @@ const Navigation = () => {
       </Link>
       <Link
         activeClass="active"
-        href='/section3'
-        to="section3"
+        href='/property'
+        to="property"
         spy={true}
         smooth={true}
         offset={-70}
@@ -32,8 +32,8 @@ const Navigation = () => {
       </Link>
       <Link
         activeClass="active"
-        href='/section4'
-        to="section4"
+        href='/'
+        to="about-us"
         spy={true}
         smooth={true}
         offset={-70}

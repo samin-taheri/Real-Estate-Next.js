@@ -7,7 +7,7 @@ import {useTranslations} from 'next-intl';
 const Subscribe = () => {
   const t = useTranslations('Index');
   return(
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font" id="about-us">
     <InfoSection>
     <div className="lg:w-1/2 px-6 lg:mt-0">
       <img className="w-18 h-18" alt="hero" src="/bg-22.jpg"/>
