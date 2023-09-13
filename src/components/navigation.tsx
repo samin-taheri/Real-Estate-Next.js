@@ -32,7 +32,7 @@ const Navigation = () => {
       </Link>
       <Link
         activeClass="active"
-        href='/'
+        href='/about-us'
         to="about-us"
         spy={true}
         smooth={true}
@@ -44,8 +44,8 @@ const Navigation = () => {
       </Link>
       <Link
         activeClass="active"
-        href='/section5'
-        to="section5"
+        href='/contact-us'
+        to="contact-us"
         spy={true}
         smooth={true}
         offset={-70}
