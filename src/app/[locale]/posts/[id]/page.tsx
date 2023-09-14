@@ -94,7 +94,7 @@ const PostDetailPage: React.FC = () => {
                     key={index}
                     src={image}
                     alt={`Image ${index + 1}`}
-                    className="w-40 h-40 rounded-lg"
+                    className="w-auto h-auto rounded-lg"
                   />
                 ))}
               </div>
