@@ -1,17 +1,34 @@
+"use client";
 import Button from '@/components/button';
 import React from 'react';;
+import { useParams } from 'next/navigation';
+
+const posts = [
+  { id: 1, title: "Complex on the first line", description: "Sale! Alanya, Mahmutlar. We bring to your attention a new project on the first line with a high investment value. ", image: "/post-3.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €" },
+  { id: 2, title: "Luxury complex", description: "Luxurious complex on the territory of 76,000 m2 in the village of Turkler. 15 km from the center of Alanya. ", image: "/post-2.jpg", location: "Kargicak", permit: "P", priceRange: "apartments from 165000 €"},
+  { id: 3, title: "EDITION", description: "The project is located in the Kargicak district, the total area of ​​the project is 2,300 m2, it consists of one block. ", image: "/post-4.jpg", location: "Avsalar", permit: "Residence Permit", priceRange: "apartments from 165000 €"},
+  { id: 4, title: "Luxury residential complex on the first line", description: "Residential complex with infrastructure on the first line in installments", image: "/post-5.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €"},
+  { id: 5, title: "Konak Premium", description: "Luxurious complex on the territory of 76,000 m2 in the village of Turkler. 15 km from the center of Alanya. ", image: "/post-6.jpg", location: "Mahmutlar", permit: "P", priceRange: "apartments from 165000 €"},
+  { id: 6, title: "Hills", description: "Apartments 1+1 ,2+1 ,3+1 at a bargain price in Avsallar with infrastructure in Avsallar with infrastructure", image: "/post-7.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €"},
+];
 
 const PostDetailPage: React.FC = () => {
+  const { id } = useParams();
+  const post = posts.find((p) => p.id === parseInt(id as string, 10));
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
        <div className="bg-rectangle bg-cover bg-center">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="/post-2.jpg"/>
+          <img className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={post.image} alt={post.title}/>
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">Mahmutlar</h2>
-            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">Complex on the first line</h1>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest">Location: {post.location}</h2>
+            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{post.title}</h1>
             <div className="flex mb-4">
               <span className="flex items-center">
                 <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-500" viewBox="0 0 24 24">
@@ -49,21 +66,15 @@ const PostDetailPage: React.FC = () => {
                 </a>
               </span>
             </div>
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">Bedrooms: 2+1</h2>
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">Bathrooms: 1,2,3</h2>
-            <h2 className="text-sm title-font text-gray-500 tracking-widest">Size: 52-104 sqft</h2>
-            
-            <div className="flex items-center pb-5 border-b-2 border-gray-100 mb-5">
+            <h2 className="text-sm title-font text-gray-500 tracking-widest">Permit: {post.permit}</h2>
+            <div className="flex mt-3 items-center pb-5 border-b-2 border-gray-100 mb-5">
             </div>
-            <p className="leading-relaxed">Sale! Alanya, Mahmutlar. We bring to your attention a new project on the first line with a high investment value. Sale! Alanya, Mahmutlar. We bring to your attention a new project on the first line with a high investment value. Sale! Alanya, Mahmutlar. We bring to your attention a new project on the first line with a high investment value. </p>
-            <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+            <p className="leading-relaxed">{post.description}</p>
+            <div className="flex mt-3 items-center pb-5 border-b-2 border-gray-100 mb-5">
             </div>
             <div className="flex justify-between">
-              <span className="title-font font-medium text-2xl text-gray-900">165000 €</span>
+              <span className="title-font font-medium text-2xl text-gray-900">{post.priceRange}</span>
               <div>
-              <Button
-                className="inline-flex ml-5 text-white bg-yellow-500 border-0 py-3 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-lg">View details
-              </Button>
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
                   <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
