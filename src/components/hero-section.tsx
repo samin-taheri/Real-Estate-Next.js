@@ -10,8 +10,7 @@ const HeroSection: React.FC = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const images: string[] = ["/bg-4.jpg", "/bg-32.jpg", "/bg-33.jpg", "/bg-34.jpg", "/bg-35.jpg", "/bg-25.jpg", "/bg-26.jpg", "/bg-27.jpg", "/bg-28.jpg"];
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  const [isContentVisible, setContentVisible] = useState(false);
-
+  
   const openPopup = () => {
     setPopupOpen(true);
   };
@@ -34,7 +33,6 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     // Delay showing content to sync with image transition
     const contentTimeout = setTimeout(() => {
-      setContentVisible(true);
     }, 500); // Adjust the delay as needed
 
     return () => clearTimeout(contentTimeout);

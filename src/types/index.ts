@@ -129,3 +129,11 @@ export interface BenefitCardProps {
     onClose: () => void;
     children?: React.ReactNode;
   }
+  export type User = {
+    id: number;
+    name: string;
+  };
+  
+  export type UsersProps = {
+    users: User[];
+  };
