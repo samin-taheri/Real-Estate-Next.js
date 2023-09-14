@@ -1,8 +1,24 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { any } from 'zod';
 
 const OurServices: React.FC = () => {
+
+  // async function getCharacters(params: any): Promise<any> {
+  //   try {
+  //     const response = await fetch("https://rickandmortyapi.com/api/character");
+  //     if (!response.ok) {
+  //       throw new Error(`Fetch failed with status ${response.status}`);
+  //     }
+  //     const data = await response.json();
+  //     return data;
+  //   } catch (error) {
+  //     console.error("Error fetching characters:", error);
+  //     throw error;
+  //   }
+  // }
+
   const t = useTranslations('Index');
   return (
     <section className="text-gray-600 body-font">
