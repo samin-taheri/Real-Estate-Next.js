@@ -14,7 +14,7 @@ const Navigation = () => {
         smooth={true}
         offset={-70}
         duration={800}
-        className="mr-7 hover:text-yellow-600 hover:underline"
+        className="mr-7 hover:text-yellow-500"
       >
         {t("citizenship")}
       </Link>
@@ -26,7 +26,7 @@ const Navigation = () => {
         smooth={true}
         offset={-70}
         duration={800}
-        className="mr-7 hover:text-yellow-600 hover:underline"
+        className="mr-7 hover:text-yellow-500"
       >
        {t("property")} 
       </Link>
@@ -38,7 +38,7 @@ const Navigation = () => {
         smooth={true}
         offset={-70}
         duration={800}
-        className="mr-7 hover:text-yellow-600 hover:underline"
+        className="mr-7 hover:text-yellow-500"
       >
         {t("about-us")} 
       </Link>
@@ -50,7 +50,7 @@ const Navigation = () => {
         smooth={true}
         offset={-70}
         duration={800}
-        className="mr-7 hover:text-yellow-600 hover:underline"
+        className="mr-7 hover:text-yellow-500"
       >
         {t("contact")} 
       </Link>
@@ -62,7 +62,7 @@ const Navigation = () => {
         smooth={true}
         offset={-70}
         duration={800}
-        className="mr-7 hover:text-yellow-600 hover:underline"
+        className="mr-7 hover:text-yellow-500"
       >
         {t("other-contries")} 
       </Link>
