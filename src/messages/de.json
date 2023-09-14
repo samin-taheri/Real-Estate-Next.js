@@ -8,7 +8,7 @@
       "property": "Eigentum",
       "about-us": "Über uns",
       "contact": "Kontakt",
-      "other-contries": "Andere Länder",
+      "subscribe": "abonnieren",
       "benefits": "Vorteile eines Lebens in der Türkei",
       "menu1": "Wohnimmobilien",
       "menu2": "Blog",
@@ -228,6 +228,8 @@
       "contact-us-page-details": "Contact Details",
       "contact-us-page-details-subtitle": "Please find the contact info and contact details below!",
       "follow-us-title": "Follow us on: ",
-      "come-to-our-office": "Come to our office"
+      "come-to-our-office": "Come to our office",
+      "other-countries-title-1": "Buying real estate and obtaining",
+      "other-countries-title-2": "residence permits in other countries"
     }
 }

@@ -3,12 +3,12 @@
       "title": "Türkiye'de mülk satın almanıza ve oturma izni almanıza yardımcı olabiliriz",
       "subtitle": "6 soruyu yanıtlayın ve oturma izni veya vatandaşlık için Türk mülklerinin kataloğunu alın",
       "get-started": "Başla",
-      "contact-info": "çevrimiçiyiz",
+      "contact-info": "Çevrimiçiyiz",
       "citizenship": "Vatandaşlık",
       "property": "Mülk",
       "about-us": "Hakkımızda",
       "contact": "Temas etmek",
-      "other-contries": "Diğer ülkeler",
+      "subscribe": "Abone ol",
       "benefits": "Türkiye'de yaşamanın faydaları",
       "menu1": "Konut mülkü",
       "menu2": "Blog",
@@ -228,6 +228,9 @@
       "contact-us-page-details": "Contact Details",
       "contact-us-page-details-subtitle": "Please find the contact info and contact details below!",
       "follow-us-title": "Follow us on: ",
-      "come-to-our-office": "Come to our office"
+      "come-to-our-office": "Come to our office",
+      "other-countries-title": "Buying real estate and obtaining residence permits in other countries",
+      "other-countries-title-1": "Buying real estate and obtaining",
+      "other-countries-title-2": "residence permits in other countries"
     }
 }

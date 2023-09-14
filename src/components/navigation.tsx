@@ -56,15 +56,15 @@ const Navigation = () => {
       </Link>
       <Link
         activeClass="active"
-        href='/footer'
-        to="footer"
+        href='/subscribe'
+        to="subscribe"
         spy={true}
         smooth={true}
         offset={-70}
         duration={800}
         className="mr-7 hover:text-yellow-500"
       >
-        {t("other-contries")} 
+        {t("subscribe")} 
       </Link>
       </nav>
   );
