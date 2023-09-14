@@ -6,11 +6,16 @@ import { faEllipsis, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./navigation";
 import ContactInfo from "./contact-info";
 import Link from "next/link";
+import Popover from "./popover";
 
 const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
   const [currentIcon, setCurrentIcon] = useState(faEllipsis);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopover = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -19,7 +24,7 @@ const Header = () => {
       }
     };
 
-    if (isMenuOpen) {
+    if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -28,23 +33,23 @@ const Header = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMenuOpen]);
+  }, [isOpen]);
 
   const openMenu = () => {
-    setMenuOpen(true);
+    setIsOpen(true);
     setCurrentIcon(faXmark);
     document.body.classList.add("disable-scroll");
   };
 
   const closeMenu = () => {
-    setMenuOpen(false);
+    setIsOpen(false);
     setCurrentIcon(faEllipsis);
     document.body.classList.remove("disable-scroll");
   };
 
   return (
     <header className="text-gray-600 body-font justify-between header">
-      <div className={isMenuOpen ? "disable-scroll" : ""}>
+      {/* <div className={isMenuOpen ? "disable-scroll" : ""}> */}
         <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center md:justify-around sm:justify-around">
         <Link href="/">
           <img
@@ -60,17 +65,20 @@ const Header = () => {
               ref={menuRef}
               tabIndex={-1}
             >
-              <Menu isOpen={isMenuOpen} onClose={closeMenu}></Menu>
+              {/* <Menu isOpen={isMenuOpen} onClose={closeMenu}></Menu> */}
               <Icon
                 icon={currentIcon}
-                onClick={isMenuOpen ? closeMenu : openMenu}
-                isOpen={isMenuOpen}
+                onClick={isOpen ? closeMenu : openMenu}
+                isOpen={isOpen}
               />
+              {isOpen && (
+                <Popover isOpen={isOpen} onClose={closeMenu}/>
+                )}
               <ContactInfo />
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </header>
   );
 };

@@ -8,7 +8,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
  
 export function generateStaticParams() {
-  return [{locale: 'en'}, {locale: 'ru'}];
+  return [{locale: 'en'}, {locale: 'ru'}, {locale: 'de'}, {locale: 'tr'}];
 }
  
 interface RootLayoutProps {

@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
                 {images.map((imageUrl, index) => (
                   <img
                     key={index}
-                    className="object-cover object-center rounded w-full h-full"
+                    className="object-cover object-center rounded w-full h-full animate__animated animate__fadeInRight"
                     alt="hero"
                     src={imageUrl}
                   />

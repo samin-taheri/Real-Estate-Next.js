@@ -124,3 +124,8 @@ export interface BenefitCardProps {
   export interface Message {
     text: string;
   }
+  export interface PopoverProps {
+    isOpen: boolean;
+    onClose: () => void;
+    children?: React.ReactNode;
+  }
