@@ -1,5 +1,5 @@
 import { PopoverProps } from '@/types';
-import React, { useState } from 'react';
+import React from 'react';
 
 const languages = [
     { code: 'en', label: 'English', image: "/america-flag.png" },

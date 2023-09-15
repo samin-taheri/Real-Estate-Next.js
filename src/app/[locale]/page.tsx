@@ -1,3 +1,4 @@
+"use client";
 import HeroSection from "@/components/hero-section";
 import Content from "@/components/content";
 import Feature from "@/components/feature";

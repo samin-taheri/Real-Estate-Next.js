@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Menu from "./right-menu";
 import Icon from "./icon";
 import { faEllipsis, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "./navigation";
@@ -16,15 +15,15 @@ const languages = [
 ];
 
 const Header = () => {
+
   const [currentIcon, setCurrentIcon] = useState(faEllipsis);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('en'); // Default language code
+  const [currentLanguage, setCurrentLanguage] = useState('en');
 
-  const togglePopover = () => {
-    setIsOpen(!isOpen);
+  const handleChangeLanguage = (code: string) => {
+    setCurrentLanguage(code);
   };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -54,13 +53,8 @@ const Header = () => {
     setCurrentIcon(faEllipsis);
     document.body.classList.remove("disable-scroll");
   };
-  const handleLanguageChange = (languageCode: string) => {
-    setSelectedLanguage(languageCode);
-  };
-
-  const selectedLanguageImage = languages.find(language => language.code === selectedLanguage)?.image || '';
-  console.log(selectedLanguageImage)
   return (
+  
     <header className="text-gray-600 body-font justify-between header">
       {/* <div className={isMenuOpen ? "disable-scroll" : ""}> */}
         <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center md:justify-around sm:justify-around">
@@ -85,7 +79,7 @@ const Header = () => {
                 isOpen={isOpen}
               />
               {isOpen && (
-                <Popover isOpen={isOpen} onClose={closeMenu}/>
+                <Popover isOpen={isOpen} onClose={closeMenu} languages={languages} onChangeLanguage={handleChangeLanguage}/>
                 )}
               <ContactInfo />
             </div>

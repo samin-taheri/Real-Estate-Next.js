@@ -130,10 +130,18 @@ export interface BenefitCardProps {
   export interface Message {
     text: string;
   }
+  export interface Language {
+    code: string;
+    label: string;
+    image: string;
+  }
+  
   export interface PopoverProps {
     isOpen: boolean;
     onClose: () => void;
     children?: React.ReactNode;
+    languages: Language[];
+    onChangeLanguage: (code: string) => void;
   }
   export type User = {
     id: number;
