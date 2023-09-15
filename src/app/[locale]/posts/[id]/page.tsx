@@ -1,6 +1,5 @@
 "use client";
-import Button from '@/components/button';
-import React, { useState } from 'react';;
+import React from 'react';;
 import { useParams } from 'next/navigation';
 
 const posts = [

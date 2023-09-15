@@ -14,7 +14,7 @@ import AboutUs from "@/components/about-us";
 import ContactUs from "@/components/contact-us";
 import DisplayYoutube from "@/components/display-youtube";
 
-export default function Home() {
+export default async function Home() {
 
   return (
     <main>
