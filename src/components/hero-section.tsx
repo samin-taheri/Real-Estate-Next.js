@@ -6,7 +6,7 @@ import {useTranslations} from 'next-intl';
 
 const HeroSection: React.FC = () => {
   const t = useTranslations('Index');
-
+  
   const [isPopupOpen, setPopupOpen] = useState(false);
   const images: string[] = ["/bg-4.jpg", "/bg-32.jpg", "/bg-33.jpg", "/bg-34.jpg", "/bg-35.jpg", "/bg-25.jpg", "/bg-26.jpg", "/bg-27.jpg", "/bg-28.jpg"];
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);

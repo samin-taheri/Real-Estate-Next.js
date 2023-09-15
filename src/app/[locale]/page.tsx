@@ -11,6 +11,7 @@ import BenefitsOfWorking from "@/components/benefits-of-working";
 import ResidenceInfo from "@/components/residence-info";
 import AboutUs from "@/components/about-us";
 import ContactUs from "@/components/contact-us";
+import DisplayYoutube from "@/components/display-youtube";
 
 export default function Home() {
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Subscribe/>
       <TableSection/>
       <AboutUs/>
+      <DisplayYoutube/>
       <ContactUs/>
       <Feature />
     </main>
