@@ -16,7 +16,7 @@ const DisplayYoutube: React.FC = () => {
         </div>
 
         <div className="lg:w-1/2 lg:ml-10 mt-8 lg:mt-0 p-10">
-          <h2 className="text-2xl font-semibold mb-4">{t("video-title")}</h2>
+          <h2 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 mb-4">{t("video-title")}</h2>
           <p className="text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             tristique in libero id tempus. Proin non sapien vel justo
