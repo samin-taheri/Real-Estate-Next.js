@@ -32,6 +32,12 @@ export interface BenefitCardProps {
     onClick: () => void;
     isOpen: boolean;
   }
+  export type LanguageSelectorProps = {
+    imageUrl: string;
+    onClick: () => void;
+    isOpen: boolean;
+  };
+
   export interface InfoSectionProps {
     children: ReactNode;
   }

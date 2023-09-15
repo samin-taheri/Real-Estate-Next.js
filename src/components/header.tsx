@@ -8,10 +8,18 @@ import ContactInfo from "./contact-info";
 import Link from "next/link";
 import Popover from "./popover";
 
+const languages = [
+  { code: 'en', label: 'English', image: "/america-flag.png" },
+  { code: 'ru', label: 'Russian', image: "/russia-flag.png" },
+  { code: 'tr', label: 'Turkish', image: "/turkey-flag.png" },
+  { code: 'de', label: 'German', image: "/germany-flag.png" },
+];
+
 const Header = () => {
   const [currentIcon, setCurrentIcon] = useState(faEllipsis);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('en'); // Default language code
 
   const togglePopover = () => {
     setIsOpen(!isOpen);
@@ -46,7 +54,12 @@ const Header = () => {
     setCurrentIcon(faEllipsis);
     document.body.classList.remove("disable-scroll");
   };
+  const handleLanguageChange = (languageCode: string) => {
+    setSelectedLanguage(languageCode);
+  };
 
+  const selectedLanguageImage = languages.find(language => language.code === selectedLanguage)?.image || '';
+  console.log(selectedLanguageImage)
   return (
     <header className="text-gray-600 body-font justify-between header">
       {/* <div className={isMenuOpen ? "disable-scroll" : ""}> */}
