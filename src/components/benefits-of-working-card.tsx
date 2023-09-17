@@ -6,7 +6,7 @@ const BenefitsOfWorkingCard: React.FC<BenefitsOfWorkingCardProps> = ({ icon, tit
         backgroundColor: color || 'rgba(255, 255, 255, 1)',
       }; 
   return (
-    <div className="hover:shadow-xl rounded-2xl flex p-7 border-2 border-gray-600" style={CardStyle}>
+    <div className="transition-transform transform hover:scale-105 hover:shadow-xl rounded-2xl flex p-7 border-2 border-gray-600" style={CardStyle}>
       <div className='w-1/6'>
       <div className="w-10 h-10 inline-flex items-center justify-center rounded-full pt-2">
         {icon}

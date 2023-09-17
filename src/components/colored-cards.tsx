@@ -9,7 +9,7 @@ const ColoredCards: React.FC<ColoredCardsProps> = ({ title, description, backgro
         color: linkColor || 'rgba(255, 255, 255, 1)',
       };
   return (
-    <div className="p-4 hover:shadow-lg rounded-2xl border-2 border-gray-600" style={CardStyle}>
+    <div className="p-4 transition-transform transform hover:scale-105 hover:shadow-xl rounded-2xl border-2 border-gray-600" style={CardStyle}>
       <h2 className="text-lg text-gray-700 font-medium title-font mb-2">{title}</h2>
       <p className="leading-relaxed text-base">{description}</p>
       <p style={LinkStyle} className="leading-relaxed text-base pt-4">{link}</p>

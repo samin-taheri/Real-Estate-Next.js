@@ -5,7 +5,7 @@ import { PropertyInfoProps } from '@/types';
 const PropertyInfo: React.FC<PropertyInfoProps> = ({ title, description, image, button }) => {
     
   return (
-    <div className="p-4 hover:shadow-xl shadow-lg-2 rounded-2xl">
+    <div className="p-4 hover:shadow-xl shadow-lg-2 rounded-2xl post-card">
          <img
           src={image}
           alt={title}
