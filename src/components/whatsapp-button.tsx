@@ -14,7 +14,7 @@ const WhatsAppButton: React.FC = () => {
   return (
     <button
 
-    className="fixed bottom-10 right-10 bg-green-500 text-white w-10 h-10 rounded-full shadow-md"
+    className="fixed bottom-10 right-0 bg-green-500 text-white w-10 h-10 rounded-full shadow-md"
     onClick={openWhatsAppChat}>
       <FontAwesomeIcon icon={faWhatsapp} />
     </button>
