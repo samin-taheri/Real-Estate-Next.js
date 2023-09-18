@@ -1,14 +1,13 @@
-"use client";
 import React from 'react';
 import InfoSection from './info-section';
 import Table from './table';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const TableSection: React.FC = () => {
   const t = useTranslations('Index');
 
   return (
-    <section className="text-gray-600 body-font px-24" id="citizenship">
+    <section className="text-gray-600 body-font" id="citizenship">
       <div className="text-center">
         <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700">
           {t("table-header-1")}
@@ -19,7 +18,7 @@ const TableSection: React.FC = () => {
         </div>
       </div>
       <InfoSection>
-        <div className="lg:w-5/6 w-full mx-auto overflow-auto mb-10">
+        <div className="lg:w-5/6 w-full mx-auto overflow-x-auto mb-10">
           <Table />
         </div>
       </InfoSection>

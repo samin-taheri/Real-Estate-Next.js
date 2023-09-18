@@ -6,6 +6,7 @@ const Table: React.FC = () => {
   const t = useTranslations('Index');
 
   return (
+    <div className="overflow-x-auto">
     <table className="table-auto w-full text-left whitespace-no-wrap">
       <thead>
         <tr>
@@ -67,6 +68,7 @@ const Table: React.FC = () => {
         />
       </tbody>
     </table>
+    </div>
   );
 };
 
