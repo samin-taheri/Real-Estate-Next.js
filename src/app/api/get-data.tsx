@@ -38,3 +38,32 @@ export const getUserData = async () => {
   //     throw error;
   //   }
   // }
+  import axios from 'axios';
+
+  export async function getServerSideProps() {
+    // Fetch data from an API or any other source
+    try {
+      const response = await axios.get('https://api.example.com/data');
+      const data = response.data;
+  
+      // Return the fetched data as props
+      return {
+        props: {
+          data,
+        },
+      };
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      return {
+        props: {
+          data: null, // You can handle errors gracefully
+        },
+      };
+    }
+  }
+  
+
+  
+  
+  
+  

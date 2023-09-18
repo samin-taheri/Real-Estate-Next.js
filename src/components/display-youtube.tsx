@@ -1,5 +1,4 @@
 import React from 'react';
-import YouTubeVideo from './youtube-video';
 import InfoSection from './info-section';
 import { useTranslations } from 'next-intl';
 import YouTube from 'react-youtube';
@@ -10,7 +9,7 @@ const DisplayYoutube: React.FC = () => {
   
   const mobileOpts = {
     height: "200",
-    width: "300", // Adjust width for mobile devices
+    width: "300", 
     playerVars: {
       autoplay: 0,
     },
@@ -18,7 +17,7 @@ const DisplayYoutube: React.FC = () => {
 
   const desktopOpts = {
     height: "350",
-    width: "500", // Adjust width for larger screens
+    width: "500", 
     playerVars: {
       autoplay: 0,
     },

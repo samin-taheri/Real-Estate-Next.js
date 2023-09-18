@@ -412,3 +412,10 @@
   filter: blur(0px) saturate(150%);
   opacity: 0.15;
 }
+
+.mobile-style {
+  /* Add your mobile-specific styles here */
+  background-color: #f0f0f0; /* Change to your desired style */
+  color: #333; /* Change to your desired style */
+  /* Add any other mobile-specific styles as needed */
+}
