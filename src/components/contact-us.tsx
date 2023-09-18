@@ -7,10 +7,13 @@ const ContactUs: React.FC = () => {
   const t = useTranslations('Index');
   return (
     <section className="text-gray-600 body-font relative" id='contact-us'>
-      <div className="text-center">
-        <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700">
+      <div className="text-center -mb-14 pt-8">
+        <h1 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700">
           {t("come-to-our-office")}
         </h1>
+        <div className="flex mt-6 justify-center">
+          <div className="w-24 h-1 rounded-full bg-yellow-500 inline-flex"></div>
+        </div>
       </div>
       <div className="container px-8 sm:px-8 py-24 mx-auto flex flex-wrap">
         <div className="lg:w-full md:w-full sm:w-full bg-gray-300 rounded-xl overflow-hidden p-10 sm:p-40 flex items-end justify-start relative">

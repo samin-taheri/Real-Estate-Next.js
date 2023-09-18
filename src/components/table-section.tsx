@@ -18,7 +18,7 @@ const TableSection: React.FC = () => {
         </div>
       </div>
       <InfoSection>
-        <div className="lg:w-5/6 w-full mx-auto overflow-x-auto mb-10">
+        <div className="lg:w-5/6 w-full mx-auto overflow-x-auto mb-5">
           <Table />
         </div>
       </InfoSection>
