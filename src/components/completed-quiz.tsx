@@ -9,7 +9,7 @@ const CompletedQuiz: React.FC = () => {
     <div>
     <div className='flex flex-col sm:flex-row md:flex-row'>
     <div className=" mb-10 md:justify-start justify-center items-end lg:w-1/2 md:w-1/2 sm:w-full" style={{maxWidth: '500px'}}>
-    <h2 className="question-text pt-4">{t("completed-quiz-title")}🤩</h2>
+    <h2 className="question-text pt-4 pb-5">{t("completed-quiz-title")}🤩</h2>
 
       <div className="pb-3">
         <input

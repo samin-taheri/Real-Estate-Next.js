@@ -9,7 +9,7 @@ const TableSection: React.FC = () => {
   return (
     <section className="text-gray-600 body-font" id="citizenship">
       <div className="text-center">
-        <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700">
+        <h1 className="sm:text-4xl text-2xl font-semibold pt-10 title-font text-gray-700 pr-10 pl-10">
           {t("table-header-1")}
           <br/>{t("table-header-2")}
         </h1>

@@ -23,7 +23,7 @@ const PostDetailPage: React.FC = () => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
        <div className="bg-rectangle bg-cover bg-center">
-      <div className="container px-2 py-24 mx-auto">
+      <div className="container px-4 sm:px-6 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg" src={post.image} alt={post.title}/>
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">

@@ -37,13 +37,10 @@ const QuizForm: React.FC<QuizFormProps> = ({
       currentImageIndex={currentImageIndex}
     />
   </div>
-  
 )}
-
 
     <div className="flex justify-between">
     {!quizCompleted && (
-     
       <Button
       onClick={onPreviousClick}
       disabled={currentQuestionIndex === 0}
