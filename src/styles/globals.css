@@ -226,6 +226,7 @@
   .hidden-button.visible {
     opacity: 1;
   }
+
   .card-post {
     position: relative;
     width: 300px;

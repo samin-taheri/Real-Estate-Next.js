@@ -3,7 +3,6 @@ import React from "react";
 import PostList from "../components/post-list";
 import Button from "./button";
 import {useTranslations} from 'next-intl';
-import Link from "next/link";
 
 const RealEstatePage: React.FC = () => {
   const t = useTranslations('Index');
@@ -21,7 +20,7 @@ const RealEstatePage: React.FC = () => {
     <section id="property">
       <PostList posts={posts} />
       <div className="flex justify-center">
-      <Link href="/view-more">
+      <a href="/view-more">
       <Button
         className="px-10 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg flex flex-row"
         iconRight={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -29,7 +28,7 @@ const RealEstatePage: React.FC = () => {
       </svg>
       }>{t("view-more")}
       </Button>
-      </Link>
+      </a>
       </div>
     </section>
   );

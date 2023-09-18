@@ -41,9 +41,11 @@ const Subscribe = () => {
                 </div>
               </div>
             </div>
+            <a href="/contact-us">
             <div className="mt-10 mb-5">
               <Button className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg py-3 px-6 text-lg">{t("about-us-button")}</Button>
             </div>
+            </a>
           </div>
         </div>
       </InfoSection>

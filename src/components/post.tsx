@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Button from "./button";
 import {PostProps} from '@/types';
 import {useTranslations} from 'next-intl';
-import Link from "next/link";
 
 const Post: React.FC<PostProps> = ({ post }) => {
   const t = useTranslations('Index');
@@ -47,9 +46,9 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>
         <p className="leading-relaxed text-base pl-7 pr-7">{post.description}</p>
         <div className="flex justify-end p-10 mt-auto">
-        <Link href={`/posts/${post.id}`}>
+        <a href={`/posts/${post.id}`}>
         <Button className={`hidden-button ${showButton ? "visible" : ""}`}>{t("view-details")}</Button>
-        </Link>
+        </a>
         </div>
     </div>
   );
