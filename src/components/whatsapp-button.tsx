@@ -13,7 +13,7 @@ const WhatsAppButton: React.FC = () => {
 
   return (
     <button
-    className="pulse-animation fixed bottom-8 right-8 bg-green-500 text-white p-2 w-12 h-12 rounded-full shadow-md cursor-pointer hover:bg-green-600 transform hover:scale-110 duration-300 focus:outline-none ring ring-green-300"
+    className="fixed bottom-8 right-8 md:bottom-16 md:right-16 lg:bottom-20 lg:right-20 bg-green-500 text-white p-2 w-12 h-12 rounded-full shadow-md cursor-pointer hover:bg-green-600 transform hover:scale-110 duration-300 focus:outline-none ring ring-green-300"
     onClick={openWhatsAppChat}>
       <FontAwesomeIcon icon={faWhatsapp} />
     </button>
