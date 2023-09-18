@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const WhatsAppButton: React.FC = () => {
   const phoneNumber = '+905077525816';
@@ -15,7 +13,7 @@ const WhatsAppButton: React.FC = () => {
     <button
     className="pulse-animation fixed bottom-8 right-8 bg-green-500 text-white w-10 h-10 rounded-full shadow-md cursor-pointer hover:bg-green-600 transform hover:scale-110 duration-300 focus:outline-none ring ring-green-300"
     onClick={openWhatsAppChat}>
-      <FontAwesomeIcon icon={faWhatsapp} />
+      <i className="fab fa-whatsapp"></i>
     </button>
   );
 };

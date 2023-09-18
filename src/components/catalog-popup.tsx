@@ -11,7 +11,7 @@ const CatalogPopup: React.FC<CatalogPopupProps> = ({ onClose }) => {
 
   return (
     <div className="popup-overlay">
-      <div className="popup-content" style={{ width: '1000px', height: '690px' }}>
+      <div className="popup-content" style={{ width: '1000px', height: '695px' }}>
         <span className="modal-close" onClick={onClose}>
           <FontAwesomeIcon icon={faTimes} />
         </span>

@@ -24,8 +24,11 @@ const RealEstatePage: React.FC = () => {
       <div className="flex justify-center">
 
       <Button
-        className="px-10 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg"
-        iconRight={<FontAwesomeIcon icon={faArrowRight} className="ml-2"/>}>{t("view-more")}
+        className="px-10 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg flex flex-row"
+        iconRight={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+      </svg>
+      }>{t("view-more")}
       </Button>
       </div>
     </section>

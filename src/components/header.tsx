@@ -66,7 +66,6 @@ const Header = () => {
           />
           </Link>
           <Navigation />
-          <div>
             <div
               className="flex items-center mb-5 sm:justify-center md:justify-center sm:pt-4 md:pt-4 pt-4"
               ref={menuRef}
@@ -83,7 +82,6 @@ const Header = () => {
                 )}
               <ContactInfo />
             </div>
-          </div>
         </div>
       {/* </div> */}
     </header>

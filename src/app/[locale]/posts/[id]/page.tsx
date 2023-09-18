@@ -87,7 +87,7 @@ const PostDetailPage: React.FC = () => {
             </div>
           </div>
           <div className="mt-8">
-              <div className="grid grid-cols-6  gap-4">
+              <div className="grid grid-cols-3 lg:grid-cols-6 gap-4">
                 {post.additionalImages.map((image, index) => (
                   <img
                     key={index}
