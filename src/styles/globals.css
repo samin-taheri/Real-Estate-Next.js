@@ -291,12 +291,13 @@
 }
 /* styles.css */
 .accordion-item {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .accordion-button {
   cursor: pointer;
-  padding: 10px;
+  border-bottom: 0.5px solid #ddd;
+  padding-bottom: 20px;
   width: 100%;
   text-align: left;
   border-top-left-radius: 10px;
@@ -308,7 +309,6 @@
 .accordion-answer {
   padding: 0;
   background-color: transparent; /* Initially transparent */
-  border: 0.5px solid #ddd;
   max-height: 0;
   overflow: hidden;
   border-bottom-left-radius: 10px;
@@ -317,12 +317,10 @@
 }
 
 .accordion-item.open .accordion-button {
-  background-color: #e5e7eb; /* Background color when accordion is open */
 }
 
 .accordion-item.open .accordion-answer {
-  padding: 20px; /* Desired padding when accordion is open */
-  background-color: #fff; /* Background color when accordion is open */
+  padding-top: 20px; /* Desired padding when accordion is open */
   max-height: 400px; /* Adjust the maximum height as needed */
 }
 /* #e06c2b */

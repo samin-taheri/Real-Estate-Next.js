@@ -1,4 +1,4 @@
-import { getPostData } from "@/api/get-data";
+import { getPostData } from "@/app/api/get-data";
 
 export default async function ListOfPosts() {
     const [posts] = await Promise.all([ getPostData()]);
