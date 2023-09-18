@@ -2,16 +2,36 @@ import React from 'react';
 import YouTubeVideo from './youtube-video';
 import InfoSection from './info-section';
 import { useTranslations } from 'next-intl';
+import YouTube from 'react-youtube';
 
 const DisplayYoutube: React.FC = () => {
   const t = useTranslations('Index');
   const videoId = "dQw4w9WgXcQ";
+  
+  const mobileOpts = {
+    height: "200",
+    width: "300", // Adjust width for mobile devices
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const desktopOpts = {
+    height: "350",
+    width: "500", // Adjust width for larger screens
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
     <InfoSection>
-      <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:items-center lg:p-10 p-10">
+      <div className="lg:flex flex-col-reverse items-center justify-center lg:flex-row lg:items-center lg:p-10 p-4">
         <div className="lg:w-1/2 lg:mr-10">
-          <YouTubeVideo videoId={videoId} />
+          <div>
+            <YouTube videoId={videoId} opts={mobileOpts} className="w-full lg:hidden" />
+            <YouTube videoId={videoId} opts={desktopOpts} className="hidden lg:block" />
+          </div>
         </div>
 
         <div className="lg:w-1/2 lg:ml-10 lg:mt-0 p-4 lg:p-10">
