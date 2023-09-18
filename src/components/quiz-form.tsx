@@ -42,6 +42,7 @@ const QuizForm: React.FC<QuizFormProps> = ({
     <div className="flex justify-between">
     {!quizCompleted && (
       <Button
+      className='px-8 py-2'
       onClick={onPreviousClick}
       disabled={currentQuestionIndex === 0}
       iconLeft={<FontAwesomeIcon icon={faAnglesLeft} className="mr-3" /> }
@@ -51,6 +52,7 @@ const QuizForm: React.FC<QuizFormProps> = ({
     )}
     {!quizCompleted && (
       <Button
+      className='px-8 py-2'
       onClick={onNextClick}
       disabled={selectedAnswer === null && !quizCompleted}
       iconRight={<FontAwesomeIcon icon={faAnglesRight} className="ml-3" /> }
