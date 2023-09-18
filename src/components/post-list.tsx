@@ -14,7 +14,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
          {t("post-header")}
          </h1>
        </div>
-    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5 bg-white">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}

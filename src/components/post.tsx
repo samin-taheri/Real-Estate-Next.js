@@ -1,8 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faFireAlt } from "@fortawesome/free-solid-svg-icons";
 import Button from "./button";
 import {PostProps} from '@/types';
 import {useTranslations} from 'next-intl';
@@ -20,7 +17,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
     setShowButton(false);
   };
   return (
-    <div className="relative mb-4 rounded-xl shadow-lg-2 hover:shadow-xl overflow-hidden flex flex-col transition-opacity post-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="relative mb-4 rounded-xl shadow-lg-2 hover:shadow-xl overflow-hidden flex flex-col transition-opacity post-card bg-white" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <img
           src={post.image}
           alt={post.title}
