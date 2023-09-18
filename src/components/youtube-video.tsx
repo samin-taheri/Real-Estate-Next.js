@@ -6,9 +6,10 @@ interface YouTubeVideoProps {
 }
 
 const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ videoId }) => {
+  
   const opts = {
-    height: "350",
-    width: "500",
+    height: "200",
+    width: "350",
     playerVars: {
       autoplay: 0,
     },

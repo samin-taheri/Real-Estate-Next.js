@@ -10,7 +10,7 @@ const Questions: React.FC = () => {
 
     <section className="text-gray-600 body-font" id="hero">
       <div className="bg-rectangle bg-cover bg-center">
-        <div className="container mx-auto flex xl:px-20 md:px-4 py-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto flex px-4 py-24 md:flex-row sm:px-4 md:px-24 md:py-16 lg:py-24 xl:py-32">
           <div className="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-left">
             <h1 className="sm:text-4xl text-2xl font-semibold title-font mb-4 text-gray-700 animate__animated animate__fadeInLeft">{t("faq-title")}</h1>
             <p className="mb-10 leading-relaxed animate__animated animate__fadeInLeft">{t("faq-subtitle")}</p>

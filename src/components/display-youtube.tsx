@@ -1,8 +1,7 @@
-"use client";
 import React from 'react';
 import YouTubeVideo from './youtube-video';
 import InfoSection from './info-section';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const DisplayYoutube: React.FC = () => {
   const t = useTranslations('Index');
@@ -10,12 +9,12 @@ const DisplayYoutube: React.FC = () => {
 
   return (
     <InfoSection>
-      <div className="flex flex-col items-center justify-center lg:flex-row lg:items-center lg:p-10 pt-10">
+      <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:items-center lg:p-10 p-10">
         <div className="lg:w-1/2 lg:mr-10">
           <YouTubeVideo videoId={videoId} />
         </div>
 
-        <div className="lg:w-1/2 lg:ml-10 mt-8 lg:mt-0 p-10">
+        <div className="lg:w-1/2 lg:ml-10 lg:mt-0 p-4 lg:p-10">
           <h2 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 mb-4">{t("video-title")}</h2>
           <p className="text-gray-600">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -29,6 +28,7 @@ const DisplayYoutube: React.FC = () => {
 };
 
 export default DisplayYoutube;
+
 
   // function extractVideoId(url: string) {
   //   // Regular expressions to match YouTube video URLs
