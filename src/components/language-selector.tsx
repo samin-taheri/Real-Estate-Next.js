@@ -1,4 +1,3 @@
-// components/LanguageSelector.tsx
 import React from 'react';
 
 interface Language {

@@ -62,8 +62,8 @@ export interface BenefitCardProps {
       description: string;
       location: string;
       image: string;
-      permit: string;
       priceRange: string;
+      saleOrRent: string;
     }[];
   }
   export interface PostProps {
@@ -73,8 +73,8 @@ export interface BenefitCardProps {
       description: string;
       location: string;
       image: string;
-      permit: string;
       priceRange: string;
+      saleOrRent: string;
     };
   }
   export interface ProgressBarProps {
