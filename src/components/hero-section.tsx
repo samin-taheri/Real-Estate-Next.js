@@ -55,6 +55,7 @@ const HeroSection: React.FC = () => {
               {isPopupOpen && <CatalogPopup onClose={closePopup} />}
             </div>
           </div>
+          <script src="//code.jivosite.com/widget/g6FxhauqlI" async></script>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <div className="hero-image-container">
               <div

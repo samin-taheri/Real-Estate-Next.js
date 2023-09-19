@@ -61,9 +61,3 @@ export const getUserData = async () => {
       };
     }
   }
-  
-
-  
-  
-  
-  
