@@ -12,7 +12,7 @@ const BenefitsOfWorkingCard: React.FC<BenefitsOfWorkingCardProps> = ({ icon, tit
         {icon}
       </div>
       </div>
-      <div className='w-5/6'>
+      <div className='w-5/6 pl-4'>
       <h2 className="text-lg text-gray-700 font-medium title-font mb-2">{title}</h2>
       <p className="leading-relaxed text-base">{description}</p>
       </div>
