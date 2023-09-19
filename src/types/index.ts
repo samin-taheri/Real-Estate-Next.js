@@ -26,6 +26,7 @@ export interface BenefitCardProps {
     backgroundColor?: string;
     link: string;
     linkColor: string;
+    onClick?: () => void;
   }
   export interface IconProps {
     icon: IconDefinition;
@@ -84,6 +85,7 @@ export interface BenefitCardProps {
     description: string;
     image: string;
     button: string;
+    to: string;
   }
   export interface QuizFormProps {
     currentQuestionIndex: number;

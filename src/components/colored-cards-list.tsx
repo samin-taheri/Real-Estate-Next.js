@@ -1,10 +1,28 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import ColoredCards from './colored-cards';
 import {useTranslations} from 'next-intl';
+import CatalogPopup from './catalog-popup';
 
 const ColoredCardsList: React.FC = () => {
   const t = useTranslations('Index');
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  
+  const openPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
+  const handleButtonClick1 = () => {
+    window.location.href = "/questions";
+  };
+  const handleButtonClick2 = () => {
+    window.location.href = "/our-services";
+  };
+
   return (
     <section className="text-gray-600 body-font" id="section2">
       <div className="container px-5 py-16 mx-auto">
@@ -17,13 +35,16 @@ const ColoredCardsList: React.FC = () => {
               description={t("colored-card-subtitle-1")}
               link={t("colored-card-button-1")}
               linkColor='rgba(0, 90, 255, 0.68)'
+              onClick={openPopup}
             />
+            {isPopupOpen && <CatalogPopup onClose={closePopup} />}
             <ColoredCards
               backgroundColor='rgba(208, 248, 177, 0.5)'
               title={t("colored-card-title-2")}
               description={t("colored-card-subtitle-2")}
               link={t("colored-card-button-2")}
               linkColor='rgba(50, 133, 16, 0.68)'
+              onClick={handleButtonClick1}
             />
             <ColoredCards
               backgroundColor='rgba(246, 221, 204, 0.5)'
@@ -31,6 +52,7 @@ const ColoredCardsList: React.FC = () => {
               description={t("colored-card-subtitle-3")}
               link={t("colored-card-button-3")}
               linkColor='rgba(217, 95, 0, 0.68)'
+              onClick={handleButtonClick2}
             />
           </div>
         </div>

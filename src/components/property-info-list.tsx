@@ -16,18 +16,21 @@ const PropertyInfoList: React.FC = () => {
               description={t("property-info-subtitle-1")}
               image= "/bg-14.jpg"
               button={t("property-info-button-1")}
+              to="property"
             />
             <PropertyInfo
               title={t("property-info-title-2")}
               description={t("property-info-subtitle-2")}
               image= "/bg-23.jpg"
               button={t("property-info-button-2")}
+              to="property"
             />
             <PropertyInfo
               title={t("property-info-title-3")}
               description={t("property-info-subtitle-3")}
               image= "/bg-22.jpg"
               button={t("property-info-button-3")}
+              to="property"
             />
           </div>
         </div>
