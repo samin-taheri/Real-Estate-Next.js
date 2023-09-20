@@ -7,12 +7,12 @@ const ViewMore: React.FC = () => {
   const t = useTranslations('Index');
 
   const posts = [
-    { id: 1, title: "Complex on the first line", description: "Sale! Alanya, Mahmutlar. We bring to your attention a new project on the first line with a high investment value. ", image: "/post-3.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €", saleOrRent: "Sale" },
-    { id: 2, title: "Luxury complex", description: "Luxurious complex on the territory of 76,000 m2 in the village of Turkler. 15 km from the center of Alanya. ", image: "/post-2.jpg", location: "Kargicak", permit: "P", priceRange: "apartments from 165000 €", saleOrRent: "Sale"},
-    { id: 3, title: "EDITION", description: "The project is located in the Kargicak district, the total area of ​​the project is 2,300 m2, it consists of one block. ", image: "/post-4.jpg", location: "Avsalar", permit: "Residence Permit", priceRange: "apartments from 165000 €", saleOrRent: "Sale"},
-    { id: 4, title: "Luxury residential complex on the first line", description: "Residential complex with infrastructure on the first line in installments", image: "/post-5.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €", saleOrRent: "Sale"},
-    { id: 5, title: "Konak Premium", description: "Luxurious complex on the territory of 76,000 m2 in the village of Turkler. 15 km from the center of Alanya. ", image: "/post-6.jpg", location: "Mahmutlar", permit: "P", priceRange: "apartments from 165000 €", saleOrRent: "Sale"},
-    { id: 6, title: "Hills", description: "Apartments 1+1 ,2+1 ,3+1 at a bargain price in Avsallar with infrastructure in Avsallar with infrastructure", image: "/post-7.jpg", location: "Mahmutlar", permit: "Residence Permit", priceRange: "apartments from 165000 €", saleOrRent: "Sale"},
+    { id: 1, title: t('1-posts-title'), description: t('1-posts-desc'), image: "/1-1.jpg", location: "Kargicak", priceRange: t("1-posts-price"), saleOrRent: "For Sale" },
+    { id: 2, title: t('2-posts-title'), description: t('2-posts-desc'), image: "/2-1.jpg", location: "Alanya", priceRange: t("2-posts-price"), saleOrRent: "For Sale"  },
+    { id: 3, title: t('3-posts-title'), description: t('3-posts-desc'), image: "/3-17.jpg", location: "Alanya", priceRange: t("3-posts-price"), saleOrRent: "For Sale"  },
+    { id: 4, title: t('4-posts-title'), description: t('4-posts-desc'), image: "/4-9.jpg", location: "Oba", priceRange: t("4-posts-price"), saleOrRent: "For Sale"  },
+    { id: 5, title: t('5-posts-title'), description: t('5-posts-desc'), image: "/5-1.jpg", location: "Demirtaş", priceRange: t("5-posts-price"), saleOrRent: "For Sale"  },
+    { id: 6, title: t('6-posts-title'), description: t('6-posts-desc'), image: "/6-1.jpg", location: "Kargicak", priceRange: t("6-posts-price"), saleOrRent: "For Sale"  },
   ];
 
   return (
