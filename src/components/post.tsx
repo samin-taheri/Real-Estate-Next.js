@@ -20,7 +20,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <img
           src={post.image}
           alt={post.title}
-          className="rounded-t-lg w-full h-auto mb-5 h-60"
+          className="rounded-t-lg w-full h-40 mb-5 h-60"
         />
         <div className="absolute top-4 left-4 z-10 flex flex-col">
         <div className="bg-white bg-opacity-80 text-gray-900 py-1 px-2 rounded-2xl text-xs mb-2 flex items-center">
