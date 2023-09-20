@@ -115,7 +115,7 @@ const PostDetailPage: React.FC = () => {
         </div>
         </div>
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-            <h2 className="text-base title-font text-gray-500">Location: {post.location}</h2>
+            <h2 className="text-base title-font text-gray-500">{t('loc')}: {post.location}</h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">{post.title}</h1>
             <div className="flex mb-4">
               <div className="flex flex-col">
