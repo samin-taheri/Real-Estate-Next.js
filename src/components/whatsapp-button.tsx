@@ -17,26 +17,7 @@ const WhatsAppButton: React.FC = () => {
       className="
         pulse-animation 
         fixed
-        bottom-8
-        w-10
-        h-10
-        rounded-full
-        shadow-md
-        cursor-pointer
-        hover:bg-green-600
-        transform
-        hover:scale-110
-        duration-300
-        focus:outline-none
-        ring ring-green-300
-        md:right-8       // Right on medium screens and larger
-        md:left-8        // Left on medium screens and larger
-        right-8          // Right on small screens
-        left-8           // Left on small screens
-        bg-green-500
-        text-white
-        z-10            // Set a higher z-index value to ensure it appears above other elements
-      "
+        bottom-8 w-10 h-10 rounded-full shadow-md cursor-pointer hover:bg-green-600 transform hover:scale-110 duration-300 focus:outline-none ring ring-green-300 md:right-8 md:left-8 right-8 left-8 bg-green-500 text-white z-10"
       onClick={openWhatsAppChat}
     >
       <FontAwesomeIcon icon={faWhatsapp} />

@@ -101,6 +101,12 @@ const PostDetailPage: React.FC = () => {
                   <FontAwesomeIcon icon={faChevronRight} />
                 </button>
               </div>
+              <div className="container px-0 py-8 mx-auto">
+              <div className="bg-white relative flex-col rounded-xl shadow-lg-2 flex p-6 w-full">
+              <h1 className="text-gray-900 text-2xl title-font font-medium mb-4">{t('why-choose-this-property')}</h1>
+              <h1 className="leading-relaxed text-base font-normal">{t('the-answer')}</h1>
+                </div>
+              </div>
               </div>
           <div className="absolute top-12 left-5 z-10 flex flex-col">
         <div className="bg-yellow-100 bg-opacity-80 text-gray-700 py-1 px-2 rounded-lg text-xs mb-2 flex items-center">
