@@ -25,12 +25,40 @@ const PostDetailPage: React.FC = () => {
   }  
   
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [thumbnailIndex, setThumbnailIndex] = useState<number>(0);
+  const thumbnailsPerPage: number = 6;
+
+  const handleThumbnailNextClick = () => {
+    const newThumbnailIndex: number = thumbnailIndex + 1;
+    if (newThumbnailIndex < post.additionalImages.length) {
+      setThumbnailIndex(newThumbnailIndex);
+    }
+  };
+
+  const handleThumbnailPreviousClick = () => {
+    const newThumbnailIndex: number = thumbnailIndex - 1;
+    if (newThumbnailIndex >= 0) {
+      setThumbnailIndex(newThumbnailIndex);
+    }
+  };
+  const thumbnailStartIndex: number = thumbnailIndex;
+  const thumbnailEndIndex: number = Math.min(
+    thumbnailIndex + thumbnailsPerPage,
+    post.additionalImages.length
+  );
+
+  // Get the thumbnail images for the current range
+  const thumbnailImagesToDisplay: string[] = post.additionalImages.slice(
+    thumbnailStartIndex,
+    thumbnailEndIndex
+  );
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const imagesPerPage: number = 6;
 
   const handleNextClick = () => {
     const newIndex: number = currentIndex + 1;
-    if (newIndex < post.additionalImages.length) {
+    if (newIndex < imagesToDisplay.length) {
       setCurrentIndex(newIndex);
     }
   };
@@ -42,24 +70,39 @@ const PostDetailPage: React.FC = () => {
     }
   };
 
-  const endIndex: number = Math.min(currentIndex + imagesPerPage, post.additionalImages.length);
-  const imagesToDisplay: string[] = post.additionalImages.slice(currentIndex, endIndex);
+  const imagesToDisplay: string[] = post.additionalImages;
+  const currentImage = imagesToDisplay[currentIndex];
 
   return (
     <section className="text-gray-600 body-font overflow-hidden">
        <div className="bg-rectangle bg-cover bg-center">
       <div className="container px-4 sm:px-6 py-24 mx-auto">
       <div className="lg:w-5/6 mx-auto flex flex-wrap relative">
-            {post.additionalImages.map((image, index) => (
-              <>
-              <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                className={`lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-lg ${index === currentIndex ? 'block' : 'hidden'}`}
-              />
-              </>
-            ))}
-          <div className="absolute top-5 left-5 z-10 flex flex-col">
+      <div className="lg:w-1/2 w-full">
+              <div className="image-slider pt-7">
+                <button
+                  className={`slider-button prev-button ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  onClick={handlePreviousClick}
+                  disabled={currentIndex === 0}
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                <div className="slider-content">
+                  <div
+                    className="slide rounded-lg"
+                    style={{ backgroundImage: `url(${currentImage})` }}
+                  ></div>
+                   </div>
+                <button
+                  className={`slider-button next-button ${currentIndex === imagesToDisplay.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  onClick={handleNextClick}
+                  disabled={currentIndex === imagesToDisplay.length - 1}
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </div>
+              </div>
+          <div className="absolute top-12 left-5 z-10 flex flex-col">
         <div className="bg-yellow-100 bg-opacity-80 text-gray-700 py-1 px-2 rounded-lg text-xs mb-2 flex items-center">
         <FontAwesomeIcon icon={faTags} fixedWidth size="2x"/>
         <span className="title-font font-medium text-2xl text-gray-700 pl-2">{post.priceRange}</span>
@@ -156,16 +199,15 @@ const PostDetailPage: React.FC = () => {
           </div>
           <div className="mt-8 flex flex-col items-center">
           <div className="flex items-center justify-center">
-            <button
-              onClick={handlePreviousClick}
-              disabled={currentIndex <= 0}
-              className={`hover:bg-gray-100 py-2 px-4 rounded-l ${currentIndex <= 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          <button
+              onClick={handleThumbnailPreviousClick}
+              disabled={thumbnailIndex <= 0}
+              className={`hover:bg-gray-100 py-2 px-4 rounded-l ${thumbnailIndex <= 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-
             <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {imagesToDisplay.map((image, index) => (
+              {thumbnailImagesToDisplay.map((image, index) => (
                 <a
                   key={index}
                   href={image} // Set the href attribute to the image URL
@@ -180,11 +222,10 @@ const PostDetailPage: React.FC = () => {
                 </a>
               ))}
             </div>
-
             <button
-              onClick={handleNextClick}
-              disabled={endIndex >= post.additionalImages.length - 1}
-              className={`hover:bg-gray-100 font-bold py-2 px-4 rounded-r ${endIndex >= post.additionalImages.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+              onClick={handleThumbnailNextClick}
+              disabled={thumbnailEndIndex >= post.additionalImages.length}
+              className={`hover:bg-gray-100 font-bold py-2 px-4 rounded-r ${thumbnailEndIndex >= post.additionalImages.length ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
