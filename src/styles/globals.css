@@ -427,7 +427,7 @@
 
 .slider-content {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease-in-out; 
 }
 
 .slide {
@@ -437,11 +437,35 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: opacity 0.5s ease;
-
 }
 
 .slide.active {
   opacity: 1;
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-back {
+  animation: slide 0.3s reverse ease; /* Reverse the animation for sliding back */
 }
 
 .slider-button {

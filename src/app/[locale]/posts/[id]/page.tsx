@@ -92,7 +92,7 @@ const PostDetailPage: React.FC = () => {
                     className="slide rounded-lg"
                     style={{ backgroundImage: `url(${currentImage})` }}
                   ></div>
-                   </div>
+                  </div>
                 <button
                   className={`slider-button next-button ${currentIndex === imagesToDisplay.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
                   onClick={handleNextClick}
