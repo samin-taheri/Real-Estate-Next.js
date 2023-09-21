@@ -80,7 +80,7 @@ const Header = () => {
                 isOpen={isOpen}
               />
               {isOpen && (
-                <Popover isOpen={isOpen} onClose={closeMenu} languages={languages} onChangeLanguage={handleChangeLanguage}/>
+                <Popover isOpen={isOpen} onClose={closeMenu}  onChangeLanguage={handleChangeLanguage}  languages={languages} />
                 )}
               <ContactInfo />
             </div>

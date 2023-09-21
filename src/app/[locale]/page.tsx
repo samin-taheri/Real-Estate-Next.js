@@ -13,7 +13,6 @@ import ResidenceInfo from "@/components/residence-info";
 import AboutUs from "@/components/about-us";
 import ContactUs from "@/components/contact-us";
 import DisplayYoutube from "@/components/display-youtube";
-import Hero from "@/components/hero";
 
 export default async function Home() {
 
