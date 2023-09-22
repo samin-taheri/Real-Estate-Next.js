@@ -30,6 +30,7 @@
     "formik": "^2.2.9",
     "i18next": "^23.4.6",
     "multiformats": "^9.9.0",
+    "netlify-cli": "^16.4.2",
     "next": "13.4.3",
     "next-i18next": "^14.0.2",
     "next-intl": "^2.20.0",
