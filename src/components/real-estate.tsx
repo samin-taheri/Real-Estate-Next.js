@@ -8,23 +8,23 @@ const RealEstatePage: React.FC = () => {
   const t = useTranslations("Index");
 
   const initialPosts = [
-    { id: 1, title: t("1-posts-title"), description: t("1-posts-desc"), image: "/1-2.jpg", location: "Kargicak", priceRange: "850.000 €", saleOrRent: "For Sale" },
-    { id: 2, title: t("2-posts-title"), description: t("2-posts-desc"), image: "/2-3.jpg", location: "Alanya", priceRange: "110.000 €", saleOrRent: "For Sale" },
-    { id: 3, title: t("3-posts-title"), description: t("3-posts-desc"), image: "/3-17.jpg", location: "Alanya", priceRange: "196.500 €", saleOrRent: "For Sale" },
-    { id: 4, title: t("4-posts-title"), description: t("4-posts-desc"), image: "/4-2.jpg", location: "Oba", priceRange: "249.750 €", saleOrRent: "For Sale" },
-    { id: 5, title: t("5-posts-title"), description: t("5-posts-desc"), image: "/5-1.jpg", location: "Demirtaş", priceRange: "104.750 €", saleOrRent: "For Sale" },
-    { id: 6, title: t("6-posts-title"), description: t("6-posts-desc"), image: "/6-1.jpg", location: "Kargicak", priceRange: "104.750 €", saleOrRent: "For Sale" },
+    { id: 1, title: t("1-posts-title"), description: t("1-posts-desc"), image: "/1-2.jpg", location: "Kargicak", priceRange: "850000", saleOrRent: "For Sale" },
+    { id: 2, title: t("2-posts-title"), description: t("2-posts-desc"), image: "/2-3.jpg", location: "Alanya", priceRange: "110000", saleOrRent: "For Sale" },
+    { id: 3, title: t("3-posts-title"), description: t("3-posts-desc"), image: "/3-17.jpg", location: "Alanya", priceRange: "196500", saleOrRent: "For Sale" },
+    { id: 4, title: t("4-posts-title"), description: t("4-posts-desc"), image: "/4-2.jpg", location: "Oba", priceRange: "249750", saleOrRent: "For Sale" },
+    { id: 5, title: t("5-posts-title"), description: t("5-posts-desc"), image: "/5-1.jpg", location: "Demirtaş", priceRange: "104750", saleOrRent: "For Sale" },
+    { id: 6, title: t("6-posts-title"), description: t("6-posts-desc"), image: "/6-1.jpg", location: "Kargicak", priceRange: "104750", saleOrRent: "For Sale" },
   ];
 
-  const prices = ["850000", "110000", "196500","249750", "104750", "104750"]
+  const price = ["850000", "110000", "196500","249750", "104750", "104750"]
   const [posts, setPosts] = useState(initialPosts);
   const [selectedPriceRange, setSelectedPriceRange] = useState<number | null>(null);
 
   const filterPostsByPriceRange = (priceRange: number | null) => {
     setSelectedPriceRange(priceRange); // Update the selected price range
     if (priceRange !== null) {
-      const filteredPosts = initialPosts.filter((post, index) => {
-        const numericPrice = parseFloat(prices[index]); // Remove non-numeric characters
+      const filteredPosts = initialPosts.filter(post => {
+        const numericPrice = parseFloat(post.priceRange); // Remove non-numeric characters
         if (priceRange === 75000) {
           return numericPrice >= 50000 && numericPrice <= 75000;
         } else if (priceRange === 150000) {
