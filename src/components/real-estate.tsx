@@ -9,8 +9,8 @@ const RealEstatePage: React.FC = () => {
 
   const initialPosts = [
     { id: 1, title: t("1-posts-title"), description: t("1-posts-desc"), image: "/1-2.jpg", location: "Kargicak", priceRange: t('1-posts-price'), saleOrRent: "For Sale" },
-    { id: 2, title: t("2-posts-title"), description: t("2-posts-desc"), image: "/2-3.jpg", location: "Alanya", priceRange: t('2-posts-price'), saleOrRent: "For Sale" },
-    { id: 3, title: t("3-posts-title"), description: t("3-posts-desc"), image: "/3-17.jpg", location: "Alanya", priceRange: t('3-posts-price'), saleOrRent: "For Sale" },
+    { id: 2, title: t("2-posts-title"), description: t("2-posts-desc"), image: "/2-6.jpg", location: "Alanya", priceRange: t('2-posts-price'), saleOrRent: "For Sale" },
+    { id: 3, title: t("3-posts-title"), description: t("3-posts-desc"), image: "/3-2.jpg", location: "Alanya", priceRange: t('3-posts-price'), saleOrRent: "For Sale" },
     { id: 4, title: t("4-posts-title"), description: t("4-posts-desc"), image: "/4-2.jpg", location: "Oba", priceRange: t('4-posts-price'), saleOrRent: "For Sale" },
     { id: 5, title: t("5-posts-title"), description: t("5-posts-desc"), image: "/5-1.jpg", location: "Demirtaş", priceRange: t('5-posts-price'), saleOrRent: "For Sale" },
     { id: 6, title: t("6-posts-title"), description: t("6-posts-desc"), image: "/6-1.jpg", location: "Kargicak", priceRange: t('6-posts-price'), saleOrRent: "For Sale" },
@@ -55,7 +55,7 @@ const RealEstatePage: React.FC = () => {
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === null ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(null)}
           >
-            All Posts
+           {t("all-posts")}
           </button>
         </div>
         <div className="mb-2 pr-2">
@@ -63,7 +63,7 @@ const RealEstatePage: React.FC = () => {
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 75000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(75000)}
           >
-           From 50-75,000 €
+           {t("from")} 50-75,000 €
           </button>
         </div>
         <div className="mb-2 pr-2">
@@ -71,7 +71,7 @@ const RealEstatePage: React.FC = () => {
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 150000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(150000)}
           >
-            From 75-150,000 €
+            {t("from")} 75-150,000 €
           </button>
         </div>
         <div className="mb-2 pr-2">
@@ -79,7 +79,7 @@ const RealEstatePage: React.FC = () => {
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 250000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(250000)}
           >
-            From 150-250,000 €
+            {t("from")} 150-250,000 €
           </button>
         </div>
         <div className="mb-2">
@@ -87,7 +87,7 @@ const RealEstatePage: React.FC = () => {
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 400000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(400000)}
           >
-           From 250-400,000 €
+           {t("from")} 250-400,000 €
           </button>
         </div>
       </div>
