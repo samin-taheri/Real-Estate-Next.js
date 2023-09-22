@@ -40,7 +40,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         <div className="absolute top-4 right-4 z-10 flex flex-col">
         <div className="bg-white bg-opacity-80 text-gray-800 py-1 px-2 rounded-2xl text-xs mb-2 flex items-center">
         <FontAwesomeIcon icon={faTags} fixedWidth size="lg"/>
-          <p className="leading-relaxed pl-1">{t('from')} {post.priceRange}</p>
+        <p className="leading-relaxed pl-1">{post.priceRange}</p>
         </div>
         </div>
         <h2 className="text-lg text-gray-700 font-medium title-font mb-2 pl-7">{post.title}</h2>

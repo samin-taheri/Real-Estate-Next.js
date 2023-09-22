@@ -153,6 +153,7 @@ export interface BenefitCardProps {
   export type UsersProps = {
     users: User[];
   };
+
   export interface OtherCountriesCardProps {
     backgroundImage: string;
     title: string;
@@ -160,5 +161,3 @@ export interface BenefitCardProps {
     customWidth?: string;
     customHeight?: string;
   }
-
-  
