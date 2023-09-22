@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from 'react';;
+import React, { useEffect, useState } from 'react';;
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { useParams } from 'next/navigation';
 import {useTranslations} from 'next-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight, faBed, faBuilding, faToilet, faStairs, faBuildingUser, faArrowsUpDownLeftRight, faHospital, faPlaneDeparture, faTreeCity, faUmbrellaBeach, faTags, faCalendarCheck, faCalendarXmark } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faSpinner, faChevronRight, faBed, faBuilding, faToilet, faStairs, faBuildingUser, faArrowsUpDownLeftRight, faHospital, faPlaneDeparture, faTreeCity, faUmbrellaBeach, faTags, faCalendarCheck, faCalendarXmark } from '@fortawesome/free-solid-svg-icons';
 
 const PostDetailPage: React.FC = () => {
   const t = useTranslations('Index');
@@ -27,6 +27,18 @@ const PostDetailPage: React.FC = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [thumbnailIndex, setThumbnailIndex] = useState<number>(0);
   const thumbnailsPerPage: number = 6;
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [loading, setLoading] = useState(true);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    const slideImage = new Image();
+    slideImage.src = currentImage;
+    slideImage.onload = () => {
+      setLoading(false); // Hide the loader when the image has loaded
+    };
+  }, []);
 
   const handleThumbnailNextClick = () => {
     const newThumbnailIndex: number = thumbnailIndex + 1;
@@ -80,6 +92,12 @@ const PostDetailPage: React.FC = () => {
       <div className="lg:w-5/6 mx-auto flex flex-wrap relative">
       <div className="lg:w-1/2 w-full">
               <div className="image-slider pt-7">
+              {loading ? (
+                <div className="loader justify-center pl-60 pt-16">
+                  <FontAwesomeIcon icon={faSpinner} spin size="3x" />
+                  <p>Loading...</p>
+                </div>
+              ) : null}
                 <button
                   className={`slider-button prev-button ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                   onClick={handlePreviousClick}
@@ -88,10 +106,12 @@ const PostDetailPage: React.FC = () => {
                   <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
                 <div className="slider-content">
-                  <div
-                    className="slide rounded-lg"
-                    style={{ backgroundImage: `url(${currentImage})` }}
-                  ></div>
+                <div
+                  className={`slide rounded-lg ${loading ? 'hidden' : ''}`}
+                  style={{ backgroundImage: `url(${currentImage})` }}
+                ></div>
+                <div className="justify-center items-center">
+               </div>
                   </div>
                 <button
                   className={`slider-button next-button ${currentIndex === imagesToDisplay.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}

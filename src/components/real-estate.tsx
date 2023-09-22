@@ -51,44 +51,44 @@ const RealEstatePage: React.FC = () => {
        </div>
       <div className="flex flex-wrap justify-center mt-8">
         <div className="pr-2">
-          <Button
+          <button
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === null ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(null)}
           >
             All Posts
-          </Button>
+          </button>
         </div>
         <div className="mb-2 pr-2">
-          <Button
+          <button
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 75000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(75000)}
           >
            From 50-75,000 €
-          </Button>
+          </button>
         </div>
         <div className="mb-2 pr-2">
-          <Button
+          <button
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 150000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(150000)}
           >
             From 75-150,000 €
-          </Button>
+          </button>
         </div>
         <div className="mb-2 pr-2">
-          <Button
+          <button
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 250000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(250000)}
           >
             From 150-250,000 €
-          </Button>
+          </button>
         </div>
         <div className="mb-2">
-          <Button
+          <button
             className={`px-4 py-2 text-white rounded-lg ${selectedPriceRange === 400000 ? "bg-yellow-500" : "bg-gray-300 hover:bg-gray-400"}`}
             onClick={() => filterPostsByPriceRange(400000)}
           >
            From 250-400,000 €
-          </Button>
+          </button>
         </div>
       </div>
 
