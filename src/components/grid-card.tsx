@@ -15,7 +15,7 @@ const GridCard = () => {
             <GridWithBackground
               title="Dubai"
               description="Abu Dhabi"
-              backgroundImage="/abu-dhabi.jpg"
+              backgroundImage="/abu-dhabi-1.jpg"
             />
         
           <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4">
@@ -24,13 +24,13 @@ const GridCard = () => {
             <GridWithBackground
               title="Canada"
               description="Ottawa"
-              backgroundImage="/canada.jpg"
+              backgroundImage="/canada-1.jpg"
             />
             </div>
             <GridWithBackground
               title="America"
               description="D. C."
-              backgroundImage="/usa.jpg"
+              backgroundImage="/usa-1.jpg"
             />
             </div>
             <div className='flex flex-col'>
@@ -38,13 +38,13 @@ const GridCard = () => {
              <GridWithBackground
               title="England"
               description="London"
-              backgroundImage="/london.jpg"
+              backgroundImage="/london-1.jpg"
             />
             </div>
              <GridWithBackground
               title="Germany"
               description="Berlin"
-              backgroundImage="/berlin.jpg"
+              backgroundImage="/berlin-1.jpg"
             />
             </div>
           </div>
