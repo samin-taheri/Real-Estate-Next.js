@@ -11,14 +11,14 @@ const GridCard = () => {
           </h1>
         </div>
         <div className="container p-6 flex-wrap">
-        <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4">
             <GridWithBackground
               title="Dubai"
               description="Abu Dhabi"
               backgroundImage="/abu-dhabi.jpg"
             />
         
-          <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4 flex-row">
+          <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4">
             <div className='flex flex-col'>
             <div className='mb-4'>
             <GridWithBackground
@@ -29,7 +29,7 @@ const GridCard = () => {
             </div>
             <GridWithBackground
               title="America"
-              description="Washington D.C."
+              description="D. C."
               backgroundImage="/usa.jpg"
             />
             </div>

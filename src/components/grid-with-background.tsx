@@ -39,14 +39,14 @@ const GridWithBackground: React.FC<GridWithBackgroundProps> = ({
 
   return (
     <div
-      className="p-6 shadow-lg-2 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-yellow-50 relative"
+      className="p-6 shadow-lg-2 rounded-2xl transition-transform transform hover:scale-105 hover:shadow-xl relative"
       style={backgroundStyle}
     >
       <div style={overlayStyle}></div>
       <h2 className="text-white text-2xl font-medium title-font z-1 relative">
         {title}
       </h2>
-      <p className="text-white leading-relaxed text-base z-1 pb-20 relative">{description}</p>
+      <p className="text-white leading-relaxed text-base z-1 pb-32 relative">{description}</p>
     </div>
   );
 };
