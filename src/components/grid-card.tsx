@@ -1,13 +1,17 @@
+"use client";
 import React from 'react';
 import GridWithBackground from './grid-with-background';
+import {useTranslations} from 'next-intl';
 
 const GridCard = () => {
+  const t = useTranslations("Index");
+
   return (
     <section className="text-gray-600 body-font" id="section2">
       <div className="container px-4 py-24 mx-auto justify-center">
         <div className="flex flex-wrap w-full flex-col items-center text-center">
           <h1 className="sm:text-4xl text-2xl font-semibold mb-5 title-font text-gray-700 -mt-10">
-            Other Countries
+            {t("other-countries")}
           </h1>
         </div>
         <div className="container p-6 flex-wrap">

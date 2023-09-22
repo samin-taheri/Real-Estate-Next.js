@@ -17,7 +17,10 @@ const ViewMore: React.FC = () => {
 
   return (
     <section id="property">
-      <div className="bg-rectangle bg-cover bg-center">
+      <div className="bg-rectangle bg-cover bg-centers">
+         <h1 className="sm:text-4xl text-2xl font-semibold title-font text-gray-700 items-center text-center pt-20">
+         {t("post-header")}
+         </h1>
       <PostList posts={posts} />
       <div className="flex justify-center">
       </div>
