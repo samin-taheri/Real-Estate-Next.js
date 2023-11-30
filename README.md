@@ -40,8 +40,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 07 58" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/9159272d-75a4-434e-b397-124b99be2b79">
 
-<img width="1440" alt="Screen Shot 2023-11-30 at 11 08 10" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/2e2612a1-8003-4d96-896d-ec96ad6218a2">
-
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 08 24" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/da853c52-1fe8-42f8-ba45-55d98e4615c4">
 
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 08 34" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/367ff5d6-147c-4ceb-8d89-cdfb830bf366">
