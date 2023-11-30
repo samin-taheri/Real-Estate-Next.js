@@ -33,6 +33,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+<img width="1440" alt="Screen Shot 2023-11-30 at 11 07 41" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/177950c3-5ed1-4770-8eb3-10af98589a95">
+
+<img width="1440" alt="Screen Shot 2023-11-30 at 11 07 58" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/2071488f-c022-425a-a142-db1f42a4b409">
+
 <img width="1439" alt="Screen Shot 2023-11-30 at 11 08 50" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/533f2404-605d-456c-baaa-dfc7abf1da87">
 
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 10 27" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/317724c4-c341-49d3-8d2e-aed0b36d3807">
@@ -58,10 +62,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 10 52" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/71667f5b-21ce-4169-925c-ad17c05228f6">
 
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 09 27" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/576dffe0-6cd6-4d67-8846-8baf6b979077">
-
-<img width="1440" alt="Screen Shot 2023-11-30 at 11 07 58" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/2071488f-c022-425a-a142-db1f42a4b409">
-
-<img width="1440" alt="Screen Shot 2023-11-30 at 11 07 41" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/177950c3-5ed1-4770-8eb3-10af98589a95">
 
 <img width="1440" alt="Screen Shot 2023-11-30 at 11 10 45" src="https://github.com/samin-taheri/Real-Estate-Next.js/assets/58706708/0f8154b5-11f2-4416-9750-9057a43281da">
 
